@@ -33,6 +33,9 @@ namespace SpaceSim.Spacecrafts.FalconCommon
             _offsetLength = offset.Length();
             _offsetRotation = offset.Angle() - Math.PI / 2.0;
 
+            // Pitch = Math.PI / 2.0;
+
+            //_texture = new Bitmap("Textures/Spacecrafts/Falcon/Common/drogueChute.png");
             _texture = new Bitmap("Textures/Spacecrafts/Falcon/Common/drogueChutes.png");
         }
 
@@ -68,7 +71,7 @@ namespace SpaceSim.Spacecrafts.FalconCommon
 
                 if (Pitch < 0.25)
                 {
-                    Pitch += 0.025 * dt;
+                    Pitch += 0.05 * dt;
                 }
 
                 if (Width < 6.0)
@@ -101,8 +104,8 @@ namespace SpaceSim.Spacecrafts.FalconCommon
 
             graphics.TranslateTransform(offset.X, offset.Y);
 
-            //graphics.RotateTransform((float)((drawingRotation + Math.PI * 0.5) * 180 / Math.PI));
-            graphics.RotateTransform((float)((drawingRotation - Math.PI) * 180 / Math.PI));
+            graphics.RotateTransform((float)((drawingRotation + Math.PI * 0.5) * 180 / Math.PI));
+            //graphics.RotateTransform((float)((drawingRotation - Math.PI) * 180 / Math.PI));
 
             graphics.TranslateTransform(-offset.X, -offset.Y);
 

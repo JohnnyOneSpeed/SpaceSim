@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>2</StartTime>
+    <Duration>2</Duration>
+    <TargetOrientation>-92</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>2</StartTime>
+    <Duration>5</Duration>
+    <Message>Tower clearance yaw manoeuvre started.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>7</StartTime>
+    <Duration>2</Duration>
+    <TargetOrientation>-90</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>9</StartTime>
+    <Duration>5</Duration>
+    <Message>Yaw manoeuvre complete.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>12</StartTime>
+    <Duration>133</Duration>
+    <TargetOrientation>-160</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>12</StartTime>
+    <Duration>5</Duration>
+    <Message>Pitch manoeuvre downrange started.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>145</StartTime>
+    <Duration>5</Duration>
+    <Message>Pitch manoeuvre complete.</Message>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>154</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>155</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-150</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>165</StartTime>
+    <Duration>75</Duration>
+    <TargetOrientation>-154</TargetOrientation>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>184</StartTime>
+  </Command>
+  <Command xsi:type="Deploy">
+    <Part>LAS</Part>
+    <StartTime>188</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>240</StartTime>
+    <Duration>80</Duration>
+    <TargetOrientation>-157</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>320</StartTime>
+    <Duration>80</Duration>
+    <TargetOrientation>-163</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>400</StartTime>
+    <Duration>80</Duration>
+    <TargetOrientation>-169</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>480</StartTime>
+    <Duration>45</Duration>
+    <TargetOrientation>-172</TargetOrientation>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>525</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>525</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-174</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>535</StartTime>
+    <Duration>150</Duration>
+    <TargetOrientation>-176</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Prograde">
+    <StartTime>720</StartTime>
+    <Duration>10000</Duration>
+    <InitialAdjustmentTime>10</InitialAdjustmentTime>
+  </Command>-->
+
+</ArrayOfCommand>

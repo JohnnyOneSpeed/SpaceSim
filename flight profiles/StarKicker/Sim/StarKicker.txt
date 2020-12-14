@@ -1,0 +1,43 @@
+[quote author=wilbobaggins link=topic=37599.msg1931246#msg1931246 date=1554377942]
+In other news didn't Elon just hint at a 40 ton dry mass stage with 1200 tons fuel capacity. Can we please get some data/simulations on this?
+
+Fully fuelled in eliptical orbit could be pretty darn powerful.
+[/quote]
+
+From the tweets:
+
+1. Massive delta velocity slam from highly elliptical Earth orbit using a fully retanked, but lightened up Starship with no heat shield or fins/legs. Best choice for the impatient. Ion engines are too slow.
+
+2. Probably no fairing either & just 3 Raptor Vacuum engines. Mass ratio of ~30 (1200 tons full, 40 tons empty) with Isp of 380. Then drop a few dozen modified Starlink satellites from empty engine bays with ~1600 Isp, MR 2. Spread out, see what’s there. Not impossible.
+
+Here's a simulation of the new 'StarKicker' variant of Starship, with a single 250kg Starlink satellite for payload. I've used the ion engine only as far as Jupiter, saving some propellant for later on. The sim predicts some extremely fast transit times:
+
+1. Mars orbit in 44 days.
+2. Jupiter flyby in 223 days. Voyager 1 took 551 days. 
+3. Saturn's orbit in 423 days. Voyager 1 took 1,169 days.
+
+If there a few dozen satellites, all with slightly different trajectories, then the Jovian flyby could be used as a sort of gravitational lens to spread the trajectories widely. A short video is attached.
+
+
+[quote author=wilbobaggins link=topic=37599.msg1932842#msg1932842 date=1554616806]
+How much could it do on a slower but still very practical, say three-year trajectory to Jupiter? i.e Europa clipper type. 
+Thanks!
+[/quote]
+
+It's difficult to explain the potential of the StarKicker concept. Even if the payload was 150t, the maximum for Starship, then from that highly elliptical orbit, the sim estimates it would get to Jupiter in 345 days.
+
+Assuming the 40t dry mass figure doesn't include any payload, then a 6t Europa Clipper would take 249 days.
+
+[quote author=tleski link=topic=37599.msg1933206#msg1933206 date=1554722264]
+[quote author=Oersted link=topic=37599.msg1933180#msg1933180 date=1554712934]
+Am I wrong in thinking that ion thusting does not deliver the necessary delta-v in a sufficiently short amount of time to brake for orbit around a planet? The initial approach speed needs to be reduced hugely to ensure capture, even into a very elliptical orbit, IMHO. Unless combined with aerobraking I don't see how ion thrusters could work...
+[/quote]
+Ion thrusters worked well for Dawn probe to insert into orbits around two different objects.
+[/quote]
+
+Vesta:		2.590E+20 kg
+Ceres:		9.393E+20 kg
+Earth:		5.972E+24 kg
+Jupiter:	1.898E+27 kg
+
+Ion thrusters did work well for the Dawn probe, but the bodies it orbited were not planets. Their combined mass is over six orders of magnitude less than Jupiter.

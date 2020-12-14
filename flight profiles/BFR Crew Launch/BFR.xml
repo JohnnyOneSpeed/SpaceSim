@@ -3,7 +3,7 @@
   <Command xsi:type="Ignition">
     <StartTime>0.01</StartTime>
     <Duration>0.1</Duration>
-    <Throttle>95</Throttle>
+    <Throttle>90</Throttle>
   </Command>
   <Command xsi:type="Throttle">
     <StartTime>5</StartTime>

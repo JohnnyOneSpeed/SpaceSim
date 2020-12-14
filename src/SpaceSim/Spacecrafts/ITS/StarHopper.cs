@@ -17,8 +17,9 @@ namespace SpaceSim.Spacecrafts.ITS
 
         public override double DryMass { get { return 100000; } }
         public override double Width { get { return 9; } }
-        //public override double Height { get { return 17; } }
-        public override double Height { get { return 39.55; } }
+        public override double Height { get { return 17; } }
+        //public override double Width { get { return 9; } }
+        //public override double Height { get { return 39.55; } }
 
         public override AeroDynamicProperties GetAeroDynamicProperties { get { return AeroDynamicProperties.ExposedToAirFlow; } }
 
@@ -105,18 +106,15 @@ namespace SpaceSim.Spacecrafts.ITS
         {
             StageOffset = new DVector2(0, 0);
 
-            Engines = new IEngine[3];
-            for (int i = 0; i < 3; i++)
-            {
-                double engineOffsetX = (i - 1) / 1.4;
-                var offset = new DVector2(engineOffsetX * Width * 0.22, Height * 0.32);
-                Engines[i] = new RaptorSL300(i, this, offset);
-            }
+            Engines = new IEngine[1];
+            double engineOffsetX = 0;
+            var offset = new DVector2(engineOffsetX * Width * 0.22, Height * 0.32);
+            Engines[0] = new RaptorSL300(0, this, offset);
 
             //_spriteSheet = new SpriteSheet("Textures/Spacecrafts/Its/scaledShip.png", 12, 12);
 
-            string texturePath = "Its/StarHopper.png";
-            //string texturePath = "Its/StarHopper2.png";
+            //string texturePath = "Its/StarHopper.png";
+            string texturePath = "Its/StarHopper2.png";
             string fullPath = Path.Combine("Textures/Spacecrafts", texturePath);
             this.Texture = new Bitmap(fullPath);
 
@@ -151,13 +149,13 @@ namespace SpaceSim.Spacecrafts.ITS
 
             graphics.ResetTransform();
 
-            if (Settings.Default.WriteCsv && (DateTime.Now - timestamp > TimeSpan.FromSeconds(1)))
+            if (Settings.Default.WriteCsv && (DateTime.Now - timestamp > TimeSpan.FromSeconds(1.14)))
             {
                 string filename = MissionName + ".csv";
 
                 if (!File.Exists(filename))
                 {
-                    File.AppendAllText(filename, "Velocity, Acceleration, Altitude, Throttle, Pressure\r\n");
+                    File.AppendAllText(filename, "Velocity (m/s), Acceleration (dm/s²), Altitude (m), Throttle (%)\r\n");
                 }
 
                 timestamp = DateTime.Now;
@@ -166,12 +164,13 @@ namespace SpaceSim.Spacecrafts.ITS
                 double velocity = this.GetRelativeVelocity().Length();
                 double dynamicPressure = 0.5 * density * velocity * velocity;
 
-                string contents = string.Format("{0}, {1}, {2}, {3}, {4}\r\n",
+                string contents = string.Format("{0}, {1}, {2}, {3}\r\n",
                     this.GetRelativeVelocity().Length() * 10,
-                    this.GetRelativeAcceleration().Length() * 100,
-                    this.GetRelativeAltitude() / 10,
-                    this.Throttle * 10,
-                    dynamicPressure / 10);
+                    this.GetRelativeAcceleration().Length() * 10,
+                    this.GetRelativeAltitude() - 93.8,
+                    //this.GetDownrangeDistance(new DVector2(110173478023.81982, 102548302161.23631)),
+                    //this.GetDownrangeDistance(new DVector2(0, 0)),
+                    this.Throttle);
                 File.AppendAllText(filename, contents);
             }
         }

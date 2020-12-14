@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="RelativePitch">
+    <StartTime>-2</StartTime>
+    <Duration>0.1</Duration>
+    <TargetOrientation>180</TargetOrientation>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>-2</StartTime>
+    <TargetScale>-20</TargetScale>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>-1</StartTime>
+    <Duration>473400</Duration>
+    <InitialAdjustmentTime>0</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>6</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 100x.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>12</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of a Lunar return trip by Orion + ESM + ICPS from LEO.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>12</StartTime>
+    <TargetIndex>10</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>12</StartTime>
+    <TargetScale>1100</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>600</StartTime>
+    <Duration>5</Duration>
+    <Message>The ICPS RL-10 generates 2,996m/s of ΔV in 1130s, enough to reach half way to the moon.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>720</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>1125</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>1125</StartTime>
+    <TargetScale>-835</TargetScale>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>1140</StartTime>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>1165</StartTime>
+    <TargetIndex>10</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>1165</StartTime>
+    <TargetScale>1260</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>1300</StartTime>
+    <Duration>5</Duration>
+    <Message>A relatively short 122s burn from the ESM AJ-10 is enough to make up the deficit.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>1300</StartTime>
+    <TargetIndex>12</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>1800</StartTime>
+    <TargetIndex>13</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>3000</StartTime>
+    <TargetIndex>14</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>231800</StartTime>
+    <TargetIndex>13</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>231800</StartTime>
+    <TargetScale>-100</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>267800</StartTime>
+    <TargetIndex>12</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>267800</StartTime>
+    <TargetScale>-100</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>273200</StartTime>
+    <Duration>5</Duration>
+    <Message>A 270s retrograde burn nearly matches the Moon's orbital velocity around the Earth ...</Message>
+  </Command>
+  <Command xsi:type="Retrograde">
+    <StartTime>273200</StartTime>
+    <Duration>360</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>273220</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>273220</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>273500</StartTime>
+    <Duration>5</Duration>
+    <Message>... placing Orion in an elliptical lunar orbit.</Message>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>273500</StartTime>
+    <Duration>473400</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>273500</StartTime>
+    <TargetIndex>13</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>300000</StartTime>
+    <TargetIndex>14</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>350000</StartTime>
+    <Duration>5</Duration>
+    <Message>The Moon's orbit around the Earth causes the ellipse to precess, rotating the perilune.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>360000</StartTime>
+    <Duration>5</Duration>
+    <Message>This makes an Earth injection from perilune inefficient, so I'll circularise the orbit first.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>434280</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>434280</StartTime>
+    <TargetScale>80</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>434480</StartTime>
+    <TargetIndex>14</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>662400</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>662380</StartTime>
+    <Duration>5</Duration>
+    <Message>A 400s burn escapes the Moon's influence, and reduces the Orion's Earth orbital velocity.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>662380</StartTime>
+    <TargetScale>80</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>662800</StartTime>
+    <TargetIndex>14</TargetIndex>
+  </Command>
+  
+
+</ArrayOfCommand>

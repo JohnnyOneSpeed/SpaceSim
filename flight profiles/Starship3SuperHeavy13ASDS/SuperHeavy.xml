@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Ignition">
+    <StartTime>-2</StartTime>
+    <Duration>0.5</Duration>
+    <Throttle>85</Throttle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>0</StartTime>
+    <Duration>6</Duration>
+    <TargetThrottle>100</TargetThrottle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>60</StartTime>
+    <Duration>5</Duration>
+    <TargetThrottle>80</TargetThrottle>
+    <EngineIds>
+      <int>0</int>
+      <int>1</int>
+      <int>2</int>
+      <int>3</int>
+      <int>4</int>
+      <int>5</int>
+      <int>6</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>76</StartTime>
+    <Duration>5</Duration>
+    <TargetThrottle>100</TargetThrottle>
+    <EngineIds>
+      <int>0</int>
+      <int>1</int>
+      <int>2</int>
+      <int>3</int>
+      <int>4</int>
+      <int>5</int>
+      <int>6</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>158</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>160</StartTime>
+    <Duration>200</Duration>
+    <TargetOrientation>-20</TargetOrientation>
+  </Command>
+  <Command xsi:type="Deploy">
+    <Part>Grid Fins</Part>
+    <StartTime>170</StartTime>
+  </Command>
+  <Command xsi:type="Retrograde">
+    <StartTime>487.95</StartTime>
+    <Duration>34</Duration>
+    <InitialAdjustmentTime>10</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>507.95</StartTime>
+    <Duration>0.1</Duration>
+    <Throttle>60</Throttle>
+    <EngineIds>
+      <int>1</int>
+      <int>2</int>
+      <int>3</int>
+      <int>4</int>
+      <int>5</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>517.95</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>1</int>
+      <int>5</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>522</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+</ArrayOfCommand>

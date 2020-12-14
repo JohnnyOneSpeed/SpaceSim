@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Ignition">
+    <StartTime>-1</StartTime>
+    <Duration>0.5</Duration>
+    <Throttle>70</Throttle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>0</StartTime>
+    <Duration>9</Duration>
+    <TargetThrottle>98</TargetThrottle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>9</StartTime>
+    <Duration>20</Duration>
+    <TargetThrottle>50</TargetThrottle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>226</StartTime>
+    <Duration>10</Duration>
+    <TargetThrottle>94</TargetThrottle>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>230</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>4</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>231</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>5</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>233</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>3</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>236</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>6</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>252</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>2</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>272</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>7</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>310</StartTime>
+    <Duration>10</Duration>
+    <TargetThrottle>90</TargetThrottle>
+  </Command>
+  <!--<Command xsi:type="Shutdown">
+    <StartTime>232</StartTime>
+    <Duration>0.5</Duration>
+  </Command>-->
+</ArrayOfCommand>

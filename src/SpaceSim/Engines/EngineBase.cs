@@ -23,6 +23,7 @@ namespace SpaceSim.Engines
         private double _offsetRotation;
 
         private EngineFlame _engineFlame;
+        private Plume _plume;
 
         protected EngineBase(ISpaceCraft parent, DVector2 offset, EngineFlame flame)
         {
@@ -30,9 +31,20 @@ namespace SpaceSim.Engines
             Offset = offset;
 
             _offsetLength = offset.Length();
-            _offsetRotation = offset.Angle() - Math.PI / 2.0;
+            _offsetRotation = (offset.Angle() - Math.PI / 2.0);
 
             _engineFlame = flame;
+        }
+
+        protected EngineBase(ISpaceCraft parent, DVector2 offset, Plume plume)
+        {
+            Parent = parent;
+            Offset = offset;
+
+            _offsetLength = offset.Length();
+            _offsetRotation = offset.Angle() - Math.PI / 2.0;
+
+            _plume = plume;
         }
 
         public virtual void Startup()
@@ -71,12 +83,18 @@ namespace SpaceSim.Engines
 
             double throttle = (IsActive && Parent.PropellantMass > 0) ? Throttle : 0;
 
-            _engineFlame.Update(timeStep, Parent.Position - offset, Parent.Velocity, Parent.Pitch, throttle, ispMultiplier, Cant * Offset.X);
+            if(_engineFlame != null)
+                _engineFlame.Update(timeStep, Parent.Position - offset, Parent.Velocity, Parent.Pitch, throttle, ispMultiplier, Cant * Offset.X / 3);
+            if (_plume != null)
+                _plume.Update(timeStep, Parent.Position - offset, Parent.Velocity, Parent.Pitch, throttle, ispMultiplier, Cant * Offset.X / 3);
         }
 
         public void Draw(Graphics graphics, Camera camera)
         {
-            _engineFlame.Draw(graphics, camera);
+            if (_engineFlame != null)
+                _engineFlame.Draw(graphics, camera);
+            if (_plume != null)
+                _plume.Draw(graphics, camera);
         }
     }
 }

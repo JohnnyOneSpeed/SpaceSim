@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Ignition">
+    <StartTime>-2</StartTime>
+    <Duration>1.0</Duration>
+    <Throttle>50</Throttle>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>-3</StartTime>
+    <Duration>1</Duration>
+    <TargetOrientation>5</TargetOrientation>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>-2</StartTime>
+    <TargetScale>-15</TargetScale>
+  </Command>
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>4</StartTime>
+    <TargetScale>40</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>6</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of the upcoming Starship SN8 flight to a 15km altitude and return.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>12</StartTime>
+    <Duration>5</Duration>
+    <Message>It assumes a 120t dry mass for SN8, much less than the 200t of Starship Mk1.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>12</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>18</StartTime>
+    <Duration>5</Duration>
+    <Message>Given three 200t thrust SL Raptors @ 50% thrust, and a 120t propellant load, the initial T/W is only 1.16.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>18</StartTime>
+    <TargetScale>70</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>24</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 2x.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>24</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>24</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>33</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>45</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>74</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>75</StartTime>
+    <Duration>5</Duration>
+    <Message>Peak Mach number on ascent is 0.99.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>88</StartTime>
+    <TargetScale>-410</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>88</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>94</StartTime>
+    <Duration>15</Duration>
+    <TargetOrientation>-180</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>94</StartTime>
+    <Duration>15</Duration>
+    <TargetOrientation>30</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>110</StartTime>
+    <TargetScale>480</TargetScale>
+  </Command>-->
+  <Command xsi:type="Post">
+    <StartTime>140</StartTime>
+    <Duration>5</Duration>
+    <Message>Peak Mach number on descent is 0.59.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>142</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 4x.</Message>
+  </Command>
+  <!--<Command xsi:type="Rate">
+    <StartTime>142</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>248</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>248</StartTime>
+    <TargetScale>-350</TargetScale>
+  </Command>-->
+  <Command xsi:type="Dihedral">
+    <StartTime>229.6</StartTime>
+    <Duration>1</Duration>
+    <TargetOrientation>5</TargetOrientation>
+    <FinIds>
+      <int>0</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>229.6</StartTime>
+    <Duration>8</Duration>
+    <TargetOrientation>90</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>229.6</StartTime>
+    <Duration>8</Duration>
+    <TargetOrientation>-70</TargetOrientation>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>230.6</StartTime>
+    <Duration>1.0</Duration>
+    <Throttle>50</Throttle>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>258.4</StartTime>
+    <TargetScale>-60</TargetScale>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>237.6</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>-90</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>240</StartTime>
+    <TargetScale>-20</TargetScale>
+  </Command>-->
+  <Command xsi:type="Shutdown">
+    <StartTime>242.0</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+</ArrayOfCommand>

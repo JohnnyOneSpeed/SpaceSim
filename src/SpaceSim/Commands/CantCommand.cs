@@ -1,4 +1,5 @@
-﻿using SpaceSim.Common.Contracts.Commands;
+﻿using SpaceSim.Common;
+using SpaceSim.Common.Contracts.Commands;
 using SpaceSim.Engines;
 using SpaceSim.Spacecrafts;
 using VectorMath;
@@ -22,6 +23,8 @@ namespace SpaceSim.Commands
             {
                 _currentOrientation = engine.Cant;
             }
+
+            EventManager.AddMessage(string.Format("Canting {0} {1}s to {2}", spaceCraft.Engines.Length, spaceCraft.Engines[0].ToString(), UnitDisplay.Degrees(_targetOrientation)), spaceCraft);
         }
 
         public override void Finalize(SpaceCraftBase spaceCraft)

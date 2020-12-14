@@ -58,6 +58,7 @@ namespace SpaceSim.Proxies
         public DVector2 AccelerationD { get; private set; }
         public DVector2 AccelerationL { get; private set; }
         public DVector2 AccelerationN { get; private set; }
+        public DVector2 AccelerationY { get; private set; }
 
         public override Color IconColor { get { return Color.White; } }
 
@@ -85,6 +86,7 @@ namespace SpaceSim.Proxies
             AccelerationD = DVector2.Zero;
             AccelerationL = DVector2.Zero;
             AccelerationN = DVector2.Zero;
+            AccelerationY = DVector2.Zero;
 
             base.ResetAccelerations();
         }
@@ -128,6 +130,8 @@ namespace SpaceSim.Proxies
                     AccelerationN.X = -AccelerationG.X;
                     AccelerationN.Y = -AccelerationG.Y;
 
+                    AccelerationY = new DVector2(0, 0);
+
                     OnGround = true;
                 }
                 else
@@ -168,16 +172,21 @@ namespace SpaceSim.Proxies
 
             if (_thrust > 0)
             {
-                var thrustVector = new DVector2(Math.Cos(Pitch), Math.Sin(Pitch));
+                var thrustVector = new DVector2(Math.Cos(Pitch) * Math.Cos(Yaw), Math.Sin(Pitch) * Math.Cos(Yaw));
+                var yawVector = new DVector2(Math.Cos(Pitch) * Math.Sin(Yaw), Math.Sin(Pitch) * Math.Sin(Yaw));
 
                 AccelerationN += (thrustVector * _thrust) / Mass;
+                AccelerationY += (yawVector * _thrust) / Mass;
             }
 
             Velocity += (AccelerationG * dt);
             Velocity += (AccelerationD * dt);
             Velocity += (AccelerationN * dt);
-
+            
             Position += (Velocity * dt);
+
+            LateralVelocity += (AccelerationY * dt);
+            LateralPosition += (LateralVelocity * dt);
         }
 
         public override double Visibility(RectangleD cameraBounds)

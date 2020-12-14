@@ -121,6 +121,11 @@ namespace SpaceSim.SolarSystem
             }
         }
 
+        public new DVector2 GetLateralAcceleration()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public virtual double BoundingRadius
         {
             get { return SurfaceRadius + AtmosphereHeight; }

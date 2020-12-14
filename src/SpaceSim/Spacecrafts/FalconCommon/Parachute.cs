@@ -33,8 +33,9 @@ namespace SpaceSim.Spacecrafts.FalconCommon
             _offsetLength = offset.Length();
             _offsetRotation = offset.Angle();
 
+            Pitch = Math.PI / 12.0;
             //Pitch = -Math.PI / 2.0;
-            Pitch = Math.PI / 2.0 + Math.PI / 12.0;
+            //Pitch = Math.PI / 2.0 + Math.PI / 12.0;
 
             _texture = new Bitmap("Textures/Spacecrafts/Falcon/Common/parachutes.png");
         }

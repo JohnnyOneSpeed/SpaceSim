@@ -85,7 +85,7 @@ namespace SpaceSim.Spacecrafts.FalconCommon
             double drawingRotation = _parent.Pitch + Pitch;
 
             DVector2 drawingOffset = new DVector2(Math.Cos(drawingRotation), Math.Sin(drawingRotation)) * -13.0;
-
+            
             RectangleF screenBounds = RenderUtils.ComputeBoundingBox(Position - drawingOffset, camera.Bounds, Width, Height);
 
             var offset = new PointF(screenBounds.X + screenBounds.Width * 0.5f, screenBounds.Y + screenBounds.Height * 0.5f);

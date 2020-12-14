@@ -122,8 +122,10 @@ namespace SpaceSim.Spacecrafts.DragonV2
         public DragonV2(string craftDirectory, DVector2 position, DVector2 velocity, double payloadMass, double propellantMass)
             : base(craftDirectory, position, velocity, payloadMass, propellantMass, "Dragon/V2/crewdragon.png")
         {
-            _drogueChute = new DrogueChute(this, new DVector2(7.0, -8.5));
-            _parachute = new Parachute(this, new DVector2(-10.0, -36.0));
+            // _drogueChute = new DrogueChute(this, new DVector2(7.0, -8.5));
+            // _parachute = new Parachute(this, new DVector2(-10.0, -36.0));
+            _drogueChute = new DrogueChute(this, new DVector2(1.5, 1.0));
+            _parachute = new Parachute(this, new DVector2(35.5, -10.0));
 
             Engines = new IEngine[]
             {

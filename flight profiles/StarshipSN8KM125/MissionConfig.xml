@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<MissionConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <VehicleType>StarshipSN8</VehicleType>
+  <PayloadMass>0</PayloadMass>
+  <PropellantMass>230000</PropellantMass>
+  <ParentPlanet>Earth</ParentPlanet>
+  <LaunchDate>2020-12-09T16:40:00</LaunchDate>
+  <ClockDelay>2</ClockDelay>
+  <Inclination>26.0</Inclination>
+</MissionConfig>

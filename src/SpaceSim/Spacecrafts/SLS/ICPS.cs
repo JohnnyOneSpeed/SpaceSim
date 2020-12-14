@@ -19,7 +19,7 @@ namespace SpaceSim.Spacecrafts.FalconHeavy
         {
             get
             {
-                if (!_deployedFairings)
+                if (_leftFairing != null && _rightFairing != null && !_deployedFairings)
                 {
                     return 3490 + _leftFairing.DryMass + _rightFairing.DryMass;
                 }
@@ -86,8 +86,11 @@ namespace SpaceSim.Spacecrafts.FalconHeavy
 
         public override void Release()
         {
-            _rightFairing.Release();
-            _leftFairing.Release();
+            if (_leftFairing != null && _rightFairing != null)
+            {
+                _rightFairing.Release();
+                _leftFairing.Release();
+            }
 
             base.Release();
         }
@@ -105,7 +108,7 @@ namespace SpaceSim.Spacecrafts.FalconHeavy
         {
             base.Update(dt);
 
-            if (!_deployedFairings)
+            if (_leftFairing != null && _rightFairing != null && !_deployedFairings)
             {
                 _leftFairing.UpdateChildren(Position, Velocity);
                 _rightFairing.UpdateChildren(Position, Velocity);
@@ -128,8 +131,11 @@ namespace SpaceSim.Spacecrafts.FalconHeavy
         {
             base.RenderGdi(graphics, camera);
 
-            _leftFairing.RenderGdi(graphics, camera);
-            _rightFairing.RenderGdi(graphics, camera);
+            if (_leftFairing != null && _rightFairing != null)
+            {
+                _leftFairing.RenderGdi(graphics, camera);
+                _rightFairing.RenderGdi(graphics, camera);
+            }
 
             if (Settings.Default.WriteCsv && (DateTime.Now - timestamp > TimeSpan.FromMilliseconds(1125)))
             {

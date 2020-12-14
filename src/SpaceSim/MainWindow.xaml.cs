@@ -87,7 +87,11 @@ namespace SpaceSim
 
         private TextDisplay _textDisplay;
 
-        int _bmIndex = Settings.Default.FirstBitmapIndex;
+        private int _bmIndex = Settings.Default.FirstBitmapIndex;
+        private bool useKmh = Settings.Default.UseKmh;
+        private float launchInclination;
+        private double initialPerigee = 0;
+
         DateTime now = DateTime.Now;
 
         public MainWindow()
@@ -181,8 +185,9 @@ namespace SpaceSim
             var mercury = new Mercury();
             var venus = new Venus();
 
-            float inclination = primaryMission.Inclination;
-            var earth = new Earth(inclination);
+            launchInclination = primaryMission.Inclination;
+
+            var earth = new Earth(launchInclination);
             var moon = new Moon(earth.Position, earth.Velocity);
 
             var mars = new Mars();
@@ -750,17 +755,19 @@ namespace SpaceSim
                     //_spaceCraftManager.Render(graphics, _pipCam);
                 }
 
+                double pitch = 0.0;
+                double flightPathAngle = 0.0;
                 foreach (IGauge gauge in _gauges)
                 {
                     if (targetSpaceCraft != null)
                     {
-                        double pitch = 0.0;
                         if (_targetInOrbit && _rotateInOrbit)
                             pitch = _gravitationalBodies[_targetIndex].Pitch;
                         else
                             pitch = _gravitationalBodies[_targetIndex].GetRelativePitch();
 
-                        gauge.Update(pitch, throttle / 100.0, pitch - targetSpaceCraft.GetAlpha());
+                        flightPathAngle = pitch - targetSpaceCraft.GetAlpha();
+                        gauge.Update(pitch, throttle / 100.0, flightPathAngle);
                     }
 
                     gauge.Render(graphics, cameraBounds);
@@ -792,9 +799,13 @@ namespace SpaceSim
                 _textDisplay.AddTextBlock(StringAlignment.Far, "FPS: " + frameTimer.CurrentFps);
 
                 double targetVelocity = target.GetRelativeVelocity().Length();
+                double inertialVelocity = target.GetInertialVelocity().Length();
 
                 // Info for altitude
-                var altitudeInfo = new List<string> { "Altitude: " + UnitDisplay.Distance(target.GetRelativeAltitude()) };
+                // double altitude = target.GetRelativeAltitude();
+                // double altitude = target.GetRelativeAltitude() + 82.5;    // Starship Mk1
+                double altitude = target.GetRelativeAltitude() - 111.4;     // Starship + Super Heavy
+                var altitudeInfo = new List<string> { "Altitude: " + UnitDisplay.Distance(altitude) };
 
                 // Add downrange if spacecraft exists
                 if (targetSpaceCraft != null)
@@ -809,14 +820,55 @@ namespace SpaceSim
                 // Info for speed / acceleration
                 var movementInfo = new List<string>
                 {
-                    "Relative Speed: " + UnitDisplay.Speed(targetVelocity, false),
-                    "Relative Acceleration: " + UnitDisplay.Acceleration(target.GetRelativeAcceleration().Length()),
+                    "Inertial Velocity: " + UnitDisplay.Speed(targetVelocity, useKmh),
+                    "Orbital Velocity: " + UnitDisplay.Speed(inertialVelocity, useKmh),
+                    "Inertial Acceleration: " + UnitDisplay.Acceleration(target.GetRelativeAcceleration().Length()),
+                    "Orbital Acceleration: " + UnitDisplay.Acceleration(target.GetInertialAcceleration().Length())
                 };
+
+                double lateralVelocity = target.GetLateralVelocity().Length();
+                if(lateralVelocity > 0)
+                {
+                    double lateralPosition = target.GetLateralPosition().Length();
+                    altitudeInfo.Add("Crossrange: " + UnitDisplay.Distance(lateralPosition));
+
+                    movementInfo.Add("Lateral Velocity: " + UnitDisplay.Speed(lateralVelocity, useKmh));
+                    movementInfo.Add("Lateral Acceleration: " + UnitDisplay.Acceleration(target.GetLateralAcceleration().Length()));
+                }
 
                 // Add angle of attack if it exists
                 if (targetSpaceCraft != null)
                 {
-                    movementInfo.Add("Angle of Attack: " + UnitDisplay.Degrees(targetSpaceCraft.GetAlpha()));
+                    movementInfo.Add("Angle of Attack: " + UnitDisplay.AoA(targetSpaceCraft.GetAlpha()));
+
+                    // calculate the current inclination
+                    double G = 6.67408E-11;
+                    double M = target.GravitationalParent.Mass;
+                    double μ = G * M;
+                    double R = target.GravitationalParent.SurfaceRadius;
+                    double apogee = target.Apoapsis;
+                    if(initialPerigee == 0)
+                        initialPerigee = target.Periapsis;
+                    double Ra = R + apogee;
+                    double Rp = R + initialPerigee;
+                    double e = 1 - 2 / ((Ra/Rp) + 1);
+                    double ω = 0;
+                    double f = 0;
+
+                    // orbital period
+                    double a = (initialPerigee + R * 2 + apogee) / 2;
+                    double P = 2 * Math.PI * Math.Pow(Math.Pow(a, 3) / μ, 0.5);
+                    double n = 2 * Math.PI / P;
+                    double Δi = 2 * Math.Asin(lateralVelocity * (1 + e * Math.Cos(f)) / (Math.Pow(1 - Math.Pow(e, 2), 0.5) * Math.Cos(ω + f) * n * a * 2));
+                    double inclination = launchInclination * MathHelper.DegreesToRadians - Δi;
+                    movementInfo.Add("Inclination: " + UnitDisplay.Degrees(inclination));
+
+                    double speedOfSound = targetSpaceCraft.GravitationalParent.GetSpeedOfSound(target.GetRelativeAltitude());
+                    if (speedOfSound > 0)
+                    {
+                        double machNumber = targetVelocity / speedOfSound;
+                        movementInfo.Add("Mach number: " + UnitDisplay.Mach(machNumber));
+                    }
                 }
 
                 _textDisplay.AddTextBlock(StringAlignment.Near, movementInfo);

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>10</StartTime>
+    <Duration>134</Duration>
+    <TargetOrientation>-160</TargetOrientation>
+  </Command>
+  <Command xsi:type="Roll">
+    <StartTime>20</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>90</TargetOrientation>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>136</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>140</StartTime>
+    <Duration>50</Duration>
+    <TargetOrientation>-180</TargetOrientation>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>186</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>190</StartTime>
+    <Duration>310</Duration>
+    <TargetOrientation>-183</TargetOrientation>
+  </Command>
+  <Command xsi:type="Deploy">
+    <Part>Fairing</Part>
+    <StartTime>200</StartTime>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>600</StartTime>
+    <Duration>949800</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>3760</StartTime>
+  </Command>
+	<Command xsi:type="RelativePitch">
+	  <StartTime>950400</StartTime>
+	  <Duration>20</Duration>
+	  <TargetOrientation>-7.3</TargetOrientation>
+	</Command>
+  <Command xsi:type="Ignition">
+    <StartTime>950430</StartTime>
+    <Duration>0.5</Duration>
+    <Throttle>100</Throttle>
+    <EngineIds>
+      <int>0</int>
+      <int>2</int>
+      <int>4</int>
+      <int>6</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>950450.5</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>950460</StartTime>
+    <Duration>539940</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Retrograde">
+    <StartTime>1490410</StartTime>
+    <Duration>86400</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+</ArrayOfCommand>

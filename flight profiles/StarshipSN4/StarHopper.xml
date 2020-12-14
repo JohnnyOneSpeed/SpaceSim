@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Zoom">
+    <StartTime>-4.9</StartTime>
+    <TargetScale>-20</TargetScale>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>-4.5</StartTime>
+    <Duration>0.5</Duration>
+    <Throttle>50</Throttle>
+  </Command>
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>0.0</StartTime>
+    <Duration>0.5</Duration>
+    <TargetThrottle>69.0</TargetThrottle>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>2.0</StartTime>
+    <Duration>2.0</Duration>
+    <TargetOrientation>-91.0</TargetOrientation>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>2.0</StartTime>
+    <Duration>18.0</Duration>
+    <TargetThrottle>64.0</TargetThrottle>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>7</StartTime>
+    <TargetScale>24</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>16</StartTime>
+    <TargetScale>24</TargetScale>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>20.0</StartTime>
+    <Duration>2.0</Duration>
+    <TargetOrientation>-91.0</TargetOrientation>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>20.0</StartTime>
+    <Duration>0.5</Duration>
+    <TargetThrottle>51.5</TargetThrottle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>30.0</StartTime>
+    <Duration>0.5</Duration>
+    <TargetThrottle>60.0</TargetThrottle>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>30</StartTime>
+    <TargetScale>24</TargetScale>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>31.0</StartTime>
+    <Duration>3.0</Duration>
+    <TargetThrottle>59</TargetThrottle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>34.0</StartTime>
+    <Duration>6.0</Duration>
+    <TargetThrottle>55.5</TargetThrottle>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>38.2</StartTime>
+    <Duration>2.0</Duration>
+    <TargetOrientation>-88.8</TargetOrientation>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>40.0</StartTime>
+    <Duration>0.5</Duration>
+    <TargetThrottle>50</TargetThrottle>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>40</StartTime>
+    <TargetScale>-24</TargetScale>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>41.0</StartTime>
+    <Duration>17.0</Duration>
+    <TargetThrottle>54</TargetThrottle>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>53</StartTime>
+    <TargetScale>-24</TargetScale>
+  </Command>
+  <Command xsi:type="Retrograde">
+    <StartTime>50</StartTime>
+    <Duration>10</Duration>
+    <InitialAdjustmentTime>10</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>58.0</StartTime>
+    <Duration>0.5</Duration>
+    <TargetThrottle>62.6</TargetThrottle>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>60</StartTime>
+    <TargetScale>-24</TargetScale>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>66.0</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+</ArrayOfCommand>

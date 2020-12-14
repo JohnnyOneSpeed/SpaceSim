@@ -5,6 +5,7 @@ using SpaceSim.Physics;
 using VectorMath;
 using SpaceSim.Common;
 using SpaceSim.Drawing;
+using SpaceSim.Spacecrafts.FalconCommon;
 
 namespace SpaceSim.Spacecrafts.Electron
 {
@@ -55,7 +56,7 @@ namespace SpaceSim.Spacecrafts.Electron
         {
             get
             {
-                double area = Math.PI * Math.Pow(Width / 2, 2);
+                double area = Math.PI * Math.Pow(Width / 2, 2) * _parafoilRatio;
                 double alpha = GetAlpha();
 
                 return Math.Abs(area * Math.Cos(alpha));
@@ -87,10 +88,37 @@ namespace SpaceSim.Spacecrafts.Electron
             }
         }
 
+        public override void DeployDrogues()
+        {
+            _drogueChute.Deploy();
+        }
+
+        public override void DeployParachutes()
+        {
+            if (!_drogueDeployed)
+            {
+                _drogueDeployed = true;
+            }
+            else if (!_parafoilDeployed)
+            {
+                _drogueDeployed = false;
+                _parafoilDeployed = true;
+            }
+        }
+
+        private bool _drogueDeployed;
+        private bool _parafoilDeployed;
+        private double _parafoilRatio = 1.0;
+        DrogueChute _drogueChute;
+        Parafoil _parafoil;
+
         public ElectronS1(string craftDirectory, DVector2 position, DVector2 velocity, double propellantMass = 9250)
             : base(craftDirectory, position, velocity, 0, propellantMass, "Electron/ElectronS1.png")
         {
             StageOffset = new DVector2(0, 8.0);
+
+            _drogueChute = new DrogueChute(this, new DVector2(0, 5));
+            _parafoil = new Parafoil(this, new DVector2(-1.5, 0.0), true);
 
             Engines = new IEngine[9];
 
@@ -102,6 +130,23 @@ namespace SpaceSim.Spacecrafts.Electron
 
                 Engines[i] = new Rutherford(i, this, offset);
             }
+        }
+
+        public override void Update(double dt)
+        {
+            base.Update(dt);
+
+            if (_drogueDeployed)
+            {
+                _parafoilRatio = 5.0;
+            }
+            else if (_parafoilDeployed)
+            {
+                _parafoilRatio = 50.0;
+            }
+
+            _drogueChute.Update(dt);
+            _parafoil.Update(dt);
         }
 
         protected override void RenderShip(Graphics graphics, Camera camera, RectangleF screenBounds)
@@ -117,6 +162,12 @@ namespace SpaceSim.Spacecrafts.Electron
             graphics.DrawImage(Texture, screenBounds.X - screenBounds.Width * 0.05f, screenBounds.Y, screenBounds.Width * 1.1f, screenBounds.Height);
 
             graphics.ResetTransform();
+
+            if (_drogueChute.IsDeploying() || _drogueChute.IsDeployed())
+                _drogueChute.RenderGdi(graphics, camera);
+
+            if (_parafoil.IsDeploying() || _parafoil.IsDeployed())
+                _parafoil.RenderGdi(graphics, camera);
         }
     }
 }

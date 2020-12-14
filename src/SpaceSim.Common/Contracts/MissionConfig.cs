@@ -11,6 +11,7 @@ namespace SpaceSim.Common.Contracts
     {
         public string VehicleType { get; set; }
         public double PayloadMass { get; set; }
+        public double PropellantMass { get; set; }
 
         public string ParentPlanet { get; set; }
 

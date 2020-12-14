@@ -94,5 +94,10 @@ namespace SpaceSim.Proxies
         {
             throw new System.NotImplementedException();
         }
+
+        public new DVector2 GetLateralAcceleration()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

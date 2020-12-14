@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!--<Command xsi:type="RelativePitch">
+    <StartTime>164</StartTime>
+    <Duration>0</Duration>
+    <TargetOrientation>0</TargetOrientation>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>194</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>0</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>204</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>180</TargetOrientation>
+  </Command>
+</ArrayOfCommand>

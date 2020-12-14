@@ -1,5 +1,6 @@
 ﻿using SpaceSim.Engines;
 using SpaceSim.Spacecrafts.FalconCommon;
+using System;
 using VectorMath;
 
 namespace SpaceSim.Spacecrafts.Falcon9
@@ -25,7 +26,8 @@ namespace SpaceSim.Spacecrafts.Falcon9
 
             for (int i = 0; i < 9; i++)
             {
-                double engineOffsetX = (i - 4.0) / 4.0;
+                double theta = (Math.PI * i) / 9.0;
+                double engineOffsetX = Math.Cos(theta);
 
                 var offset = new DVector2(engineOffsetX * Width * 0.3, Height * 0.48);
 

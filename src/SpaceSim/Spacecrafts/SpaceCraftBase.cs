@@ -148,6 +148,7 @@ namespace SpaceSim.Spacecrafts
         public DVector2 AccelerationD { get; protected set; }
         public DVector2 AccelerationN { get; protected set; }
         public DVector2 AccelerationL { get; protected set; }
+        public DVector2 AccelerationY { get; protected set; }
 
         protected Bitmap Texture;
         protected DVector2 StageOffset;
@@ -163,6 +164,7 @@ namespace SpaceSim.Spacecrafts
 
         private double _cachedAltitude;
         private DVector2 _cachedRelativeVelocity;
+        private DVector2 _cachedInertialVelocity;
 
         private double _trailTimer;
         private Dictionary<string, LaunchTrail> _launchTrails;
@@ -288,6 +290,21 @@ namespace SpaceSim.Spacecrafts
             return arcRatio * (2.0 * GravitationalParent.SurfaceRadius * Math.PI);
         }
 
+        public new DVector2 GetLateralAcceleration()
+        {
+            return AccelerationY;
+        }
+
+        public new DVector2 GetLateralVelocity()
+        {
+            return LateralVelocity;
+        }
+
+        public new DVector2 GetLateralPosition()
+        {
+            return LateralPosition;
+        }
+
         /// <summary>
         /// Stages the spacecraft according to its mounted angle by applying a normal force.
         /// </summary>
@@ -374,7 +391,7 @@ namespace SpaceSim.Spacecrafts
                 }
                 else
                 {
-                    // Throttle only specified engine ids
+                    // Throttle only specified fin ids
                     foreach (int finId in finIds)
                     {
                         Fins[finId].SetDihedral(dihedral);
@@ -524,6 +541,7 @@ namespace SpaceSim.Spacecrafts
             AccelerationD = DVector2.Zero;
             AccelerationL = DVector2.Zero;
             AccelerationN = DVector2.Zero;
+            AccelerationY = DVector2.Zero;
 
             base.ResetAccelerations();
         }
@@ -541,6 +559,11 @@ namespace SpaceSim.Spacecrafts
             return AccelerationD + AccelerationL + AccelerationN;
         }
 
+        public override DVector2 GetInertialAcceleration()
+        {
+            return AccelerationD + AccelerationL + AccelerationN + AccelerationG;
+        }
+
         /// <summary>
         /// Gets the relative velocity of the spacecraft. If the space craft is within the parent's
         /// atmosphere than the rotation of the planet is taken in account. Otherwise its a simple difference of velocities.
@@ -548,6 +571,11 @@ namespace SpaceSim.Spacecrafts
         public override DVector2 GetRelativeVelocity()
         {
             return _cachedRelativeVelocity.Clone();
+        }
+
+        public override DVector2 GetInertialVelocity()
+        {
+            return _cachedInertialVelocity.Clone();
         }
 
         public override double GetRelativePitch()
@@ -576,9 +604,11 @@ namespace SpaceSim.Spacecrafts
             // assume some windspeed from the West
             var alpha = -Math.PI/2;
             if (_isReleased)
-                {
-                double vAngle = GetRelativeVelocity().Angle();
-                alpha = Pitch - vAngle;
+            {
+                double flightPathAngle = GetRelativeVelocity().Angle();
+                double pitch = Pitch;
+
+                alpha = pitch - flightPathAngle;
 
                 while (alpha > Math.PI)
                 {
@@ -653,6 +683,8 @@ namespace SpaceSim.Spacecrafts
 
                     AccelerationN.X = -AccelerationG.X;
                     AccelerationN.Y = -AccelerationG.Y;
+
+                    AccelerationY = new DVector2(0, 0);
                 }
                 else
                 {
@@ -1025,9 +1057,11 @@ namespace SpaceSim.Spacecrafts
 
                 if (Thrust > 0 && _isReleased)
                 {
-                    var thrustVector = new DVector2(Math.Cos(Pitch) * Math.Cos(Yaw), Math.Sin(Pitch));
+                    var thrustVector = new DVector2(Math.Cos(Pitch) * Math.Cos(Yaw), Math.Sin(Pitch) * Math.Cos(Yaw));
+                    var yawVector = new DVector2(Math.Cos(Pitch) * Math.Sin(Yaw), Math.Sin(Pitch) * Math.Sin(Yaw));
 
                     AccelerationN += (thrustVector * Thrust) / Mass;
+                    AccelerationY += (yawVector * Thrust) / Mass;
                 }
 
                 if (_requiresStaging)
@@ -1049,6 +1083,9 @@ namespace SpaceSim.Spacecrafts
                     Velocity += AccelerationD * dt;
                     Velocity += AccelerationL * dt;
                     Velocity += AccelerationN * dt;
+
+                    LateralVelocity += AccelerationY * dt;
+                    LateralPosition += LateralVelocity * dt;
                 }
 
                 // Re-normalize FTL scenarios
@@ -1109,15 +1146,15 @@ namespace SpaceSim.Spacecrafts
             double totalDistance = difference.Length() - TotalHeight * 0.5;
 
             _cachedAltitude = totalDistance - GravitationalParent.SurfaceRadius;
+            _cachedInertialVelocity = Velocity - GravitationalParent.Velocity;
 
             double altitude = GetRelativeAltitude();
-
-            if (altitude > GravitationalParent.AtmosphereHeight)
-            {
-                _cachedRelativeVelocity = Velocity - GravitationalParent.Velocity;
-            }
-            else
-            {
+            //if (altitude > GravitationalParent.AtmosphereHeight)
+            //{
+            //    _cachedRelativeVelocity = Velocity - GravitationalParent.Velocity;
+            //}
+            //else
+            //{
                 difference.Normalize();
 
                 var surfaceNormal = new DVector2(-difference.Y, difference.X);
@@ -1130,7 +1167,7 @@ namespace SpaceSim.Spacecrafts
                 double rotationalSpeed = pathCirumference / GravitationalParent.RotationPeriod;
 
                 _cachedRelativeVelocity = Velocity - (GravitationalParent.Velocity + surfaceNormal * rotationalSpeed);   
-            }
+            //}
         }
 
         // Return an inflated bounding box for better drawing results

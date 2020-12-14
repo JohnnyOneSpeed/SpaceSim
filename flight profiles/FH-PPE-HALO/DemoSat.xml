@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>10</StartTime>
+    <Duration>120</Duration>
+    <TargetOrientation>-164</TargetOrientation>
+  </Command>
+  <Command xsi:type="Roll">
+    <StartTime>12</StartTime>
+    <Duration>23</Duration>
+    <TargetOrientation>90</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>18</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of FH launching PPE and HALO as a single payload to NRHO.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>24</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>25</StartTime>
+    <Duration>5</Duration>
+    <Message>The ΔV requirement from lunar flyby to NRHO is as little as 26.1 m/s ...</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>32</StartTime>
+    <TargetScale>80</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>33</StartTime>
+    <Duration>5</Duration>
+    <Message>... and could be achieved by the PPE SEP thrusters alone.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>38</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>39</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>39</StartTime>
+    <Duration>5</Duration>
+    <Message>So, FH only needs to deliver the payload to that lunar flyby.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>48</StartTime>
+    <TargetScale>200</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>50</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>50</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 4x.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>64</StartTime>
+    <TargetScale>40</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>84</StartTime>
+    <TargetScale>40</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>104</StartTime>
+    <TargetScale>40</TargetScale>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>135</StartTime>
+    <Duration>75</Duration>
+    <TargetOrientation>-167</TargetOrientation>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>163</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>163</StartTime>
+    <TargetScale>-450</TargetScale>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>164</StartTime>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>172</StartTime>
+    <TargetScale>650</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>172</StartTime>
+    <TargetIndex>7</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>222</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>222</StartTime>
+    <TargetScale>-560</TargetScale>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>225</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>230</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>-165</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>235</StartTime>
+    <Duration>145</Duration>
+    <TargetOrientation>-177</TargetOrientation>
+  </Command>
+  <Command xsi:type="Deploy">
+    <Part>Fairing</Part>
+    <StartTime>235</StartTime>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>240</StartTime>
+    <TargetScale>700</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>240</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>240</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 16x.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>380</StartTime>
+    <Duration>180</Duration>
+    <TargetOrientation>-178</TargetOrientation>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>510</StartTime>
+    <Next>true</Next>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>511</StartTime>
+    <Next>true</Next>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>512</StartTime>
+    <Next>true</Next>
+  </Command>
+    <Command xsi:type="Target">
+    <StartTime>513</StartTime>
+    <Next>true</Next>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>530</StartTime>
+    <TargetScale>-560</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>550</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>550</StartTime>
+    <Duration>5</Duration>
+    <Message>The simulation predicts that PPE-HALO could be delivered with re-use of the side boosters ...</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>556</StartTime>
+    <Duration>5</Duration>
+    <Message>... but with expenditure of the core booster, and probably the fairing halves.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>566</StartTime>
+    <TargetScale>700</TargetScale>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>567</StartTime>
+    <Next>false</Next>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>568</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>600</StartTime>
+    <TargetIndex>11</TargetIndex>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>600</StartTime>
+    <Duration>40000000</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>600</StartTime>
+    <TargetScale>240</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>1740</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>1800</StartTime>
+    <TargetScale>120</TargetScale>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>1920</StartTime>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>1950</StartTime>
+    <Duration>5</Duration>
+    <Message>S2 should have enough residual propellant to send it to a solar graveyard orbit.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>2000</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 20000x.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>2000</StartTime>
+    <TargetIndex>14</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>2000</StartTime>
+    <TargetScale>70</TargetScale>
+  </Command>
+
+
+</ArrayOfCommand>

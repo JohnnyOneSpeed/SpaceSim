@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<MissionConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <VehicleType>StarshipSuperHeavy</VehicleType>
+  <PayloadMass>10000</PayloadMass>
+  <!--<PayloadMass>50000</PayloadMass>-->
+  <ParentPlanet>Earth</ParentPlanet>
+  <LaunchDate>3/4/2020 2:50 PM</LaunchDate>
+  <ClockDelay>2</ClockDelay>
+  <Inclination>28.5</Inclination>
+</MissionConfig>

@@ -28,7 +28,13 @@ namespace SpaceSim.Commands
         // Interpolate between current and target orientation over the duration
         public override void Update(double elapsedTime, SpaceCraftBase spaceCraft)
         {
+            double altitude = spaceCraft.GetRelativeAltitude();
+            double atmosphereheight = spaceCraft.GravitationalParent.AtmosphereHeight;
+
             DVector2 retrograde = spaceCraft.GetRelativeVelocity();
+            if (altitude > atmosphereheight)
+               retrograde = spaceCraft.GetInertialVelocity();
+
             retrograde.Negate();
             retrograde.Normalize();
 

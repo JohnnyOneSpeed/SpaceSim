@@ -9,7 +9,7 @@ namespace SpaceSim.Engines
     {
         private double _angle;
 
-        public AJ10(int id, ISpaceCraft parent, DVector2 offset, double angle)
+        public AJ10(int id, ISpaceCraft parent, DVector2 offset, double angle = 0.0)
             : base(parent, offset, new EngineFlame(id, Color.FromArgb(63, 255, 255, 159), 50, 2, 1.0, 1.2, 0.1, angle))
         {
             _angle = angle;

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Zoom">
+    <StartTime>-3</StartTime>
+    <TargetScale>-10</TargetScale>
+  </Command>
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>0</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-90</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>5</StartTime>
+    <TargetScale>25</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>8</StartTime>
+    <TargetScale>45</TargetScale>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>10</StartTime>
+    <Duration>40</Duration>
+    <TargetOrientation>-106</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>12</StartTime>
+    <TargetScale>50</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>14</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of the Falcon Heavy boost stages launching the ICPS to LEO.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>16</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>-->
+  <Command xsi:type="Roll">
+    <StartTime>20</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>90</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>50</StartTime>
+    <Duration>50</Duration>
+    <TargetOrientation>-135</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>100</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-161</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>160</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-178</TargetOrientation>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>223</StartTime>
+  </Command>
+  <Command xsi:type="Deploy">
+    <Part>Fairing</Part>
+    <StartTime>225</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>230</StartTime>
+    <Duration>70</Duration>
+    <TargetOrientation>-185</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>300</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-185</TargetOrientation>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>305</StartTime>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>308</StartTime>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>310</StartTime>
+    <Duration>0.5</Duration>
+    <Throttle>100</Throttle>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>360</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-185</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>420</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-185</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>480</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-185</TargetOrientation>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>543</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>560</StartTime>
+    <Duration>100000</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+  <!--<Command xsi:type="Rate">
+    <StartTime>600</StartTime>
+    <TargetIndex>11</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>600</StartTime>
+    <TargetScale>160</TargetScale>
+  </Command>-->
+</ArrayOfCommand>

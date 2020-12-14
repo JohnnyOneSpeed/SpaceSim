@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Ignition">
+    <StartTime>-2</StartTime>
+    <Duration>1.0</Duration>
+    <Throttle>100</Throttle>
+  </Command>
+  <Command xsi:type="Roll">
+    <StartTime>-2</StartTime>
+    <Duration>0</Duration>
+    <TargetOrientation>180</TargetOrientation>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>-2</StartTime>
+    <TargetScale>-8</TargetScale>
+    <!--<TargetScale>-15</TargetScale>-->
+  </Command>
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>6</StartTime>
+    <Duration>5</Duration>
+    <Message>This simulation explores the envelope of a single stage Starship RTLS test flight.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>10</StartTime>
+    <Duration>40</Duration>
+    <TargetOrientation>-100</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>12</StartTime>
+    <Duration>5</Duration>
+    <Message>With 7 SL Raptors, and a full propellant load, the initial T/W is moderate.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>18</StartTime>
+    <Duration>5</Duration>
+    <Message>The theoretical ΔV available approaches 9km/s, but this can't be realised because of gravity losses.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>24</StartTime>
+    <Duration>5</Duration>
+    <Message>Also, if the ship is to return to the launch site, much of the impulse is spent reversing course.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>30</StartTime>
+    <Duration>5</Duration>
+    <Message>So, how much of the production Starship Earth EDL profile can be achieved including RTLS?</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>36</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>36</StartTime>
+    <TargetScale>320</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>48</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>48</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>80</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>130</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>50</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-128</TargetOrientation>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>60</StartTime>
+    <Duration>5</Duration>
+    <TargetThrottle>85</TargetThrottle>
+  </Command>
+  <Command xsi:type="Throttle">
+    <StartTime>80</StartTime>
+    <Duration>5</Duration>
+    <TargetThrottle>100</TargetThrottle>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>110</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-168</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>179</StartTime>
+    <Duration>15</Duration>
+    <TargetOrientation>-300</TargetOrientation>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>198</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>6</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>194</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>-360</TargetOrientation>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>208</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>0</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>222</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>5</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>240</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>1</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>263</StartTime>
+    <Duration>0.5</Duration>
+    <EngineIds>
+      <int>4</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>287</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>290</StartTime>
+    <Duration>20</Duration>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>290</StartTime>
+    <Duration>20</Duration>
+    <TargetOrientation>-375</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>354.061</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>30</TargetOrientation>
+    <FinIds>
+      <int>0</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>354.061</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>60</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>354.061</StartTime>
+    <Duration>15</Duration>
+    <TargetOrientation>-450</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>364.061</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>385</StartTime>
+    <Duration>135</Duration>
+    <TargetOrientation>-360</TargetOrientation>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>600</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>620</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>609</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>0</TargetOrientation>
+    <FinIds>
+      <int>0</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>609</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>60</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>614</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-450</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>619</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-30</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>624.15</StartTime>
+    <Duration>1.0</Duration>
+    <Throttle>80</Throttle>
+    <EngineIds>
+      <int>3</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>638.5</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+</ArrayOfCommand>

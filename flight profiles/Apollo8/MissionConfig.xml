@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<MissionConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <VehicleType>SaturnV</VehicleType>
+  <PayloadMass>300</PayloadMass>
+  <ParentPlanet>Earth</ParentPlanet>
+  <!--<LaunchDate>2019-07-19T13:16:00</LaunchDate>-->
+  <LaunchDate>2023-12-21T10:21:00</LaunchDate>
+  <ClockDelay>3</ClockDelay>
+  <Inclination>32.51</Inclination>
+  <PositionOffset></PositionOffset>
+</MissionConfig>

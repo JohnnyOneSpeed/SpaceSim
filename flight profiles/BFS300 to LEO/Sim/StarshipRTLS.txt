@@ -1,0 +1,12 @@
+Following on from the recent announcement that Starship will launch from LC-39A as a single stage rocket, this simulation explores the envelope for a hypothetical Starship RTLS test flight. With 7 SL Raptors, and a full propellant load of 1,100t, the initial T/W is moderate. The theoretical ΔV available approaches 9km/s, but this can't be realised because of gravity losses. Also, if the ship is to return to the launch site, much of the impulse is spent reversing course. So, how much of the production Starship Earth EDL profile can be achieved including RTLS?
+
+The sim suggests peak velocity on the way out is around 2,600m/s, roughly the same as the best we've seen from an expendable F9. Entry velocity on the return is a bit less than 1,800m/s, not enough to require thermal tiles, but enough to generate nearly 6gs, and an extended test of the skydiver configuration. In order to generate velocities closer to orbital, an ASDS landing would be useful.
+
+[quote author=RoboGoofers link=topic=47892.msg1949297#msg1949297 date=1558632911]
+[quote author=Craftyatom link=topic=47892.msg1949289#msg1949289 date=1558632190]
+[quote author=OneSpeed link=topic=37599.msg1949174#msg1949174 date=1558612596]In order to generate velocities closer to orbital, an ASDS landing would help.[/quote]
+This is a bit of a stretch, but perhaps a transatlantic hop would work?
+[/quote]
+There's the spaceport in the Azores Portugal is building. It's about 5300 km from 39A.
+[/quote]
+I haven't done a Starship ASDS sim in any detail yet, but it looks like it could travel about 12,000kms in an easterly direction  with no payload. 

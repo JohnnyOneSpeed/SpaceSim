@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Ignition">
+    <StartTime>-3.0</StartTime>
+    <Duration>1.0</Duration>
+    <Throttle>103</Throttle>
+    <EngineIds>
+      <int>2</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>-2.75</StartTime>
+    <Duration>1.0</Duration>
+    <Throttle>103</Throttle>
+    <EngineIds>
+      <int>1</int>
+      <int>4</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>-2.5</StartTime>
+    <Duration>1.0</Duration>
+    <Throttle>103</Throttle>
+    <EngineIds>
+      <int>0</int>
+      <int>3</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>135</StartTime>
+    <Duration>1</Duration>
+    <EngineIds>
+      <int>2</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>162</StartTime>
+    <Duration>1</Duration>
+  </Command>
+  <Command xsi:type="Retrograde">
+    <StartTime>165</StartTime>
+    <Duration>1000</Duration>
+    <InitialAdjustmentTime>200</InitialAdjustmentTime>
+  </Command>
+</ArrayOfCommand>

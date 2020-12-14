@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="Roll">
+    <StartTime>0</StartTime>
+    <Duration>0</Duration>
+    <TargetOrientation>180</TargetOrientation>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>0</StartTime>
+    <TargetScale>-20</TargetScale>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>0</StartTime>
+    <Duration>0</Duration>
+    <TargetOrientation>-180</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>1</StartTime>
+    <Duration>14</Duration>
+    <TargetOrientation>-237</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>3</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of a Starship 12.6 km/s Earth aerocapture from a Mars return mission.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>9</StartTime>
+    <Duration>5</Duration>
+    <Message>By taking advantage of the Earth's rotation, the relative entry velocity is reduced to about 12.2 km/s.</Message>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>15</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>15</StartTime>
+    <Duration>75</Duration>
+    <TargetOrientation>-237</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>27</StartTime>
+    <Duration>5</Duration>
+    <Message>The initial flight path angle (FPA) is about -7.5°.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>27</StartTime>
+    <TargetScale>840</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>33</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing the update speed to 4x.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>33</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>60</StartTime>
+    <Duration>5</Duration>
+    <Message>As the ship enters the upper atmosphere, a shock wave begins to form ...</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>60</StartTime>
+    <TargetScale>-666</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>84</StartTime>
+    <Duration>5</Duration>
+    <Message>... and the heat flux quickly climbs, especially the radiant component.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>90</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-232</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>90</StartTime>
+    <Duration>1</Duration>
+    <TargetOrientation>30</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>91</StartTime>
+    <Duration>1</Duration>
+    <TargetOrientation>45</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>100</StartTime>
+    <Duration>40</Duration>
+    <TargetOrientation>-227</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>108</StartTime>
+    <Duration>5</Duration>
+    <Message>To limit heat flux, maximise negative lift (45° AoA), and level out at the highest possible altitude.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>135</StartTime>
+    <Duration>5</Duration>
+    <Message>That way, the peak combined flux of 5.25 MW/m^2 occurs at about 69kms altitude.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>140</StartTime>
+    <Duration>30</Duration>
+    <TargetOrientation>-226</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>164</StartTime>
+    <Duration>5</Duration>
+    <Message>Once level, gradually increase AoA to maintain a constant altitude.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>170</StartTime>
+    <Duration>30</Duration>
+    <TargetOrientation>-225</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>170</StartTime>
+    <Duration>1</Duration>
+    <TargetOrientation>60</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>171</StartTime>
+    <Duration>1</Duration>
+    <TargetOrientation>45</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>190</StartTime>
+    <Duration>5</Duration>
+    <Message>Once velocity has dropped below Earth escape velocity (11km/s) ...</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>200</StartTime>
+    <Duration>40</Duration>
+    <TargetOrientation>-225</TargetOrientation>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>200</StartTime>
+    <TargetScale>840</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>214</StartTime>
+    <Duration>5</Duration>
+    <Message>... increase AoA to reduce negative lift and return to an elliptical orbit.</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>214</StartTime>
+    <TargetScale>200</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>238</StartTime>
+    <TargetScale>-200</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>238</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing the update speed to 8x.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>238</StartTime>
+    <TargetIndex>7</TargetIndex>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>300</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>300</StartTime>
+    <TargetScale>-650</TargetScale>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>240</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-228</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>300</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-240</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Roll">
+    <StartTime>300</StartTime>
+    <Duration>30</Duration>
+    <TargetOrientation>150</TargetOrientation>
+  </Command>-->
+  <Command xsi:type="Prograde">
+    <StartTime>320</StartTime>
+    <Duration>10000</Duration>
+    <InitialAdjustmentTime>30</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>320</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>0</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>350</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>-30</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+</ArrayOfCommand>

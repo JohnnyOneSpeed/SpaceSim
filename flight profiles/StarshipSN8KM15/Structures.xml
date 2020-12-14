@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfStructureConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <StructureConfig>
+    <Type>LaunchMount</Type>
+    <DownrangeDistance>0</DownrangeDistance>
+    <HeightOffset>11</HeightOffset>
+  </StructureConfig>
+  <StructureConfig>
+    <Type>LandingPad</Type>
+    <DownrangeDistance>423.2</DownrangeDistance>
+    <HeightOffset>5</HeightOffset>
+  </StructureConfig>
+</ArrayOfStructureConfig>

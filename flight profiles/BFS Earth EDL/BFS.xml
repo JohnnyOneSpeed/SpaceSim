@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>0</StartTime>
+    <Duration>0</Duration>
+    <TargetOrientation>180</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Rate">
+    <StartTime>0</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>0</StartTime>
+    <TargetScale>-30</TargetScale>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>1</StartTime>
+    <Duration>25</Duration>
+    <TargetOrientation>0</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>2</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of a 2022 crewed BFR EDL from a 166 x 166km low earth orbit.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>14</StartTime>
+    <Duration>5</Duration>
+    <Message>Pitching for the de-orbit burn.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>27</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>27</StartTime>
+    <TargetScale>1040</TargetScale>
+  </Command>-->
+  <Command xsi:type="Ignition">
+    <StartTime>30</StartTime>
+    <Duration>0.5</Duration>
+    <Throttle>50</Throttle>
+    <EngineIds>
+      <int>2</int>
+      <int>3</int>
+      <int>4</int>
+    </EngineIds>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>40</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>42</StartTime>
+    <TargetScale>-770</TargetScale>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>45</StartTime>
+    <Duration>15</Duration>
+    <TargetOrientation>-120</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>50</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>60</StartTime>
+    <Duration>680</Duration>
+    <TargetOrientation>-120</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>62</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 32x.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>62</StartTime>
+    <TargetIndex>9</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>62</StartTime>
+    <TargetScale>800</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>540</StartTime>
+    <Duration>5</Duration>
+    <Message>Drag is now beginning to slow the ship.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>720</StartTime>
+    <TargetIndex>7</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>720</StartTime>
+    <TargetScale>-640</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>720</StartTime>
+    <Duration>5</Duration>
+    <Message>Decreasing update speed to 8x.</Message>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>740</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-110</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>740</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>60</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>745</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>750</StartTime>
+    <Duration>90</Duration>
+    <TargetOrientation>-110</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>755</StartTime>
+    <Duration>5</Duration>
+    <Message>In order to maintain relatively constant deceleration as the ship descends into denser atmosphere ...</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>800</StartTime>
+    <Duration>5</Duration>
+    <Message>... the angle of attack needs to be gradually reduced from about 70 to 60°.</Message>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>840</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-115</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>840</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>30</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>845</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>850</StartTime>
+    <Duration>90</Duration>
+    <TargetOrientation>-115</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>940</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-120</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>940</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>30</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>945</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>950</StartTime>
+    <Duration>100</Duration>
+    <TargetOrientation>-120</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>1050</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-125</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>1050</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>30</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>1055</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>1060</StartTime>
+    <Duration>90</Duration>
+    <TargetOrientation>-120</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>1070</StartTime>
+    <TargetScale>600</TargetScale>
+  </Command>
+    <Command xsi:type="Zoom">
+    <StartTime>1100</StartTime>
+    <TargetScale>-510</TargetScale>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>1110</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-124</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>1110</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>50</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>1115</StartTime>
+    <Duration>5</Duration>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+    <TargetOrientation>45</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>1120</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-180</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>1180</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-180</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>1250</StartTime>
+    <TargetScale>500</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>1290</StartTime>
+    <TargetScale>-440</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>1316</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>1316</StartTime>
+    <Duration>7</Duration>
+    <TargetOrientation>-90</TargetOrientation>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>1316</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>0</TargetOrientation>
+    <FinIds>
+      <int>0</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>1320</StartTime>
+    <Duration>4</Duration>
+    <TargetOrientation>60</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Dihedral">
+    <StartTime>1324</StartTime>
+    <Duration>10</Duration>
+    <TargetOrientation>-30</TargetOrientation>
+    <FinIds>
+      <int>1</int>
+    </FinIds>
+  </Command>
+  <Command xsi:type="Retrograde">
+    <StartTime>1323</StartTime>
+    <Duration>15</Duration>
+    <InitialAdjustmentTime>5</InitialAdjustmentTime>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>1323.14</StartTime>
+    <Duration>0.5</Duration>
+    <Throttle>50</Throttle>
+    <EngineIds>
+      <int>2</int>
+      <int>3</int>
+      <int>4</int>
+    </EngineIds>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>1325</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>
+   <Command xsi:type="Zoom">
+    <StartTime>1330</StartTime>
+    <TargetScale>-50</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>1335</StartTime>
+    <TargetScale>-50</TargetScale>
+  </Command>-->
+  <Command xsi:type="Throttle">
+    <StartTime>1335.14</StartTime>
+    <Duration>0.5</Duration>
+    <TargetThrottle>28</TargetThrottle>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>1340.14</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+</ArrayOfCommand>

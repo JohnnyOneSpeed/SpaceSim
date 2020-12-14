@@ -2,13 +2,14 @@
 using SpaceSim.Particles;
 using SpaceSim.Spacecrafts;
 using VectorMath;
+using SpaceSim.Drawing;
 
 namespace SpaceSim.Engines
 {
     class RaptorSL300 : EngineBase
     {
         public RaptorSL300(int id, ISpaceCraft parent, DVector2 offset)
-            : base(parent, offset, new EngineFlame(id, Color.FromArgb(63, 209, 173, 199), 50, 2, 0.2, 0.6, 0.1))
+            : base(parent, offset, new EngineFlame(id, Color.FromArgb(30, 209, 173, 199), 50, 2, 0.2, 0.6, 0.15))
         {
         }
 
@@ -26,12 +27,12 @@ namespace SpaceSim.Engines
 
         public override IEngine Clone()
         {
-            return new RaptorSL(0, Parent, Offset);
+            return new RaptorSL300(0, Parent, Offset);
         }
 
         public override string ToString()
         {
-            return "RaptorSL";
+            return "Raptor SL 300";
         }
     }
 }

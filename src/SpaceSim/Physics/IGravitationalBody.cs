@@ -23,7 +23,12 @@ namespace SpaceSim.Physics
         double GetRelativeAltitude();
 
         DVector2 GetRelativeVelocity();
+        DVector2 GetInertialVelocity();
         DVector2 GetRelativeAcceleration();
+        DVector2 GetInertialAcceleration();
+        DVector2 GetLateralAcceleration();
+        DVector2 GetLateralVelocity();
+        DVector2 GetLateralPosition();
 
         void SetGravitationalParent(IMassiveBody parent);
 

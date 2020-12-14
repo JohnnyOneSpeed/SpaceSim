@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<MissionConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <VehicleType>BFS300 to LEO</VehicleType>
+  <PayloadMass>0</PayloadMass>
+  <ParentPlanet>Earth</ParentPlanet>
+  <LaunchDate>2019-09-01T12:00:00</LaunchDate>
+  <ClockDelay>2</ClockDelay>
+  <Inclination>28.5</Inclination>
+</MissionConfig>

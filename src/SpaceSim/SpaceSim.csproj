@@ -106,15 +106,25 @@
     <Compile Include="Controllers\CommandController.cs" />
     <Compile Include="Controllers\IController.cs" />
     <Compile Include="Controllers\SimpleFlightController.cs" />
+    <Compile Include="Drawing\Plume.cs" />
     <Compile Include="Drawing\SootRenderer.cs" />
     <Compile Include="Drawing\SpriteSheet.cs" />
     <Compile Include="Drawing\TextDisplay.cs" />
+    <Compile Include="Engines\DPS.cs" />
+    <Compile Include="Engines\AJ10-137.cs" />
     <Compile Include="Engines\BE3U.cs" />
     <Compile Include="Engines\BE4.cs" />
     <Compile Include="Engines\BE4Vac.cs" />
+    <Compile Include="Engines\F1.cs" />
     <Compile Include="Engines\Merlin1DB5.cs" />
     <Compile Include="Engines\Merlin1DB5Vac.cs" />
     <Compile Include="Engines\MiniRaptor50.cs" />
+    <Compile Include="Engines\J2.cs" />
+    <Compile Include="Engines\ApolloLaunchEscapeMotor.cs" />
+    <Compile Include="Engines\RaptorSL2019.cs" />
+    <Compile Include="Engines\RaptorSL430.cs" />
+    <Compile Include="Engines\RaptorSL360.cs" />
+    <Compile Include="Engines\RaptorVac2019.cs" />
     <Compile Include="Engines\StarlinkDrive.cs" />
     <Compile Include="Engines\NEXT.cs" />
     <Compile Include="Engines\Raptor40.cs" />
@@ -134,6 +144,7 @@
     <Compile Include="Engines\Star48.cs" />
     <Compile Include="Engines\AJ10.cs" />
     <Compile Include="Engines\OrionAbortMotor.cs" />
+    <Compile Include="Engines\Draco.cs" />
     <Compile Include="Kernels\BaseKernel.cs" />
     <Compile Include="Kernels\CallistoKernel.cs" />
     <Compile Include="Kernels\GanymedeKernel.cs" />
@@ -203,6 +214,7 @@
     <Compile Include="Spacecrafts\DemoSat.cs" />
     <Compile Include="Spacecrafts\DragonV1\Dragon.cs" />
     <Compile Include="Spacecrafts\DragonV1\DragonTrunk.cs" />
+    <Compile Include="Spacecrafts\DragonV2\DragonXL.cs" />
     <Compile Include="Spacecrafts\DragonV2\DragonV2.cs" />
     <Compile Include="Spacecrafts\DragonV2\DragonV2Trunk.cs" />
     <Compile Include="Spacecrafts\Electron\ElectronBattery.cs" />
@@ -234,9 +246,24 @@
     <Compile Include="Spacecrafts\FalconHeavy\FHBooster.cs" />
     <Compile Include="Spacecrafts\FalconHeavy\Roadster.cs" />
     <Compile Include="Spacecrafts\GreyDragon\GreyDragon.cs" />
+    <Compile Include="Spacecrafts\ITS\StarshipSN4.cs" />
+    <Compile Include="Spacecrafts\ITS\StarshipMk1.cs" />
+    <Compile Include="Spacecrafts\ITS\SuperHeavyMk1.cs" />
+    <Compile Include="Spacecrafts\ITS\SuperHeavy.cs" />
+    <Compile Include="Spacecrafts\ITS\Starship2P2P.cs" />
+    <Compile Include="Spacecrafts\ITS\Starship.cs" />
     <Compile Include="Spacecrafts\ITS\StarshipP2P.cs" />
+    <Compile Include="Spacecrafts\ITS\SSGridFin.cs" />
+    <Compile Include="Spacecrafts\Saturn\CM.cs" />
+    <Compile Include="Spacecrafts\Saturn\Interstage.cs" />
+    <Compile Include="Spacecrafts\Saturn\LM.cs" />
+    <Compile Include="Spacecrafts\Saturn\SM.cs" />
+    <Compile Include="Spacecrafts\Saturn\S-IVB.cs" />
+    <Compile Include="Spacecrafts\Saturn\S-II.cs" />
+    <Compile Include="Spacecrafts\Saturn\S-IC.cs" />
     <Compile Include="Spacecrafts\SLS\Interstage.cs" />
     <Compile Include="Spacecrafts\SLS\ESM.cs" />
+    <Compile Include="Spacecrafts\Saturn\LES.cs" />
     <Compile Include="Spacecrafts\SLS\LAS.cs" />
     <Compile Include="Spacecrafts\SLS\Orion.cs" />
     <Compile Include="Spacecrafts\SLS\ICPSFairing.cs" />
@@ -282,6 +309,9 @@
     <Compile Include="Structures\AircraftCarrier.cs" />
     <Compile Include="Structures\CrewArm.cs" />
     <Compile Include="Structures\Edwards.cs" />
+    <Compile Include="Structures\LaunchMount.cs" />
+    <Compile Include="Structures\LaunchTower.cs" />
+    <Compile Include="Structures\StarshipTower.cs" />
     <Compile Include="Structures\ITSMount.cs" />
     <Compile Include="Structures\LandingPad.cs" />
     <Compile Include="Structures\Ocean.cs" />
@@ -354,10 +384,25 @@
     <Content Include="Textures\Spacecrafts\Dragon\V2\crewdragon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Spacecrafts\Dragon\V2\DragonXL.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Textures\Spacecrafts\Dragon\V2\trunk2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Spacecrafts\Falcon\Common\drogueChutes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\FwdFlapSoot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\FwdFlap.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\FlapSoot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\Flap.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Spacecrafts\Its\Canard2.png">
@@ -366,10 +411,64 @@
     <Content Include="Textures\Spacecrafts\Its\Canard2Soot.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Spacecrafts\Its\SSGridFinLeftSoot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\SSGridFinRightSoot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\StarshipSN4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\StarshipSN8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\StarshipTanker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\StarshipMk1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\SuperHeavy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Textures\Spacecrafts\Its\StarKicker.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Spacecrafts\Its\Starship.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\SSGridFinLeft.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Its\SSGridFinRight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Satellites\PPE+HALO.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\CM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\LES.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\SII.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\SIC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\Interstage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\SIVB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\LM.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Spacecrafts\Saturn\SM.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Spacecrafts\SLS\ESM.png">
@@ -396,7 +495,19 @@
     <Content Include="Textures\Structures\crewArm45.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textures\Structures\LaunchMount.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Structures\LaunchTower.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Structures\StarshipTower.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Textures\Structures\ocean.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Textures\Structures\TestMount.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Textures\Structures\towersRight.png">

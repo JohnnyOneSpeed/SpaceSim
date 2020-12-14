@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>10</StartTime>
+    <Duration>110</Duration>
+    <TargetOrientation>-145</TargetOrientation>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>5.5</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of a Starship/SuperHeavy ASDS orbital test flight.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>11</StartTime>
+    <Duration>5</Duration>
+    <Message>It assumes 7 x 200t gimbaling and 6 x 250t fixed engines for the booster ...</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>17</StartTime>
+    <Duration>5</Duration>
+    <Message>... and three x 200t gimbaling Raptors for the ship.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>23</StartTime>
+    <Duration>5</Duration>
+    <Message>There would be no payload, and liftoff thrust/weight would be about 1.3.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>29</StartTime>
+    <Duration>5</Duration>
+    <Message>Gross lift-off weight would be 2,550t, 700t less than the 3,250t for RTLS.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>35</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>35</StartTime>
+    <TargetScale>320</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>63</StartTime>
+    <Duration>5</Duration>
+    <Message>Mach 1</Message>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>49</StartTime>
+    <TargetScale>80</TargetScale>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>73</StartTime>
+    <Duration>5</Duration>
+    <Message>Maximum aerodynamic pressure</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>75</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>75</StartTime>
+    <TargetScale>60</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>100</StartTime>
+    <TargetScale>40</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>126</StartTime>
+    <TargetScale>40</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>154</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>154</StartTime>
+    <TargetScale>-460</TargetScale>
+  </Command>
+  <Command xsi:type="Stage">
+    <StartTime>160</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>160</StartTime>
+    <Duration>4</Duration>
+    <TargetOrientation>-148</TargetOrientation>
+  </Command>
+  <Command xsi:type="Ignition">
+    <StartTime>163</StartTime>
+    <Duration>0.1</Duration>
+    <Throttle>100</Throttle>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>164</StartTime>
+    <Duration>56</Duration>
+    <TargetOrientation>-154</TargetOrientation>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>167</StartTime>
+    <Next>true</Next>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>174</StartTime>
+    <TargetIndex>7</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>174</StartTime>
+    <TargetScale>550</TargetScale>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>180</StartTime>
+    <Next>false</Next>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>180</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>220</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>220</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-160</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>280</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-165</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>340</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-169</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>400</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-173</TargetOrientation>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>425</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>425</StartTime>
+    <Next>true</Next>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>425</StartTime>
+    <TargetScale>-550</TargetScale>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>460</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-176</TargetOrientation>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>497</StartTime>
+    <TargetIndex>5</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>497</StartTime>
+    <TargetScale>230</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>505</StartTime>
+    <TargetScale>-120</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>515</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>515</StartTime>
+    <TargetScale>-120</TargetScale>
+  </Command>
+  <Command xsi:type="Shutdown">
+    <StartTime>509.22</StartTime>
+    <Duration>0.5</Duration>
+  </Command>
+  <Command xsi:type="Target">
+    <StartTime>524</StartTime>
+    <Next>false</Next>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>524</StartTime>
+    <TargetScale>660</TargetScale>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>524</StartTime>
+    <TargetIndex>7</TargetIndex>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>580</StartTime>
+    <Duration>5</Duration>
+    <Message>Starship reaches orbit with about 15t of propellant remaining.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>620</StartTime>
+    <Duration>5</Duration>
+    <Message>10t might be sufficient for landing without a payload, the remainder would be ullage.</Message>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>540</StartTime>
+    <Duration>8000</Duration>
+    <InitialAdjustmentTime>20</InitialAdjustmentTime>
+  </Command>
+</ArrayOfCommand>

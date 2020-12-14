@@ -13,6 +13,8 @@ namespace SpaceSim.Physics
 
         public DVector2 Position { get; protected set; }
         public DVector2 Velocity { get; protected set; }
+        public DVector2 LateralPosition { get; protected set; }
+        public DVector2 LateralVelocity { get; protected set; }
 
         public abstract double Mass { get; }
         public double Pitch { get; protected set; }
@@ -40,8 +42,10 @@ namespace SpaceSim.Physics
         {
             Position = position;
             Velocity = velocity;
-
             Pitch = pitch;
+
+            LateralVelocity = new DVector2(0, 0);
+            LateralPosition = new DVector2(0, 0);
 
             OrbitTrace = new OrbitTrace();
         }
@@ -88,7 +92,17 @@ namespace SpaceSim.Physics
             return DVector2.Zero;
         }
 
+        public virtual DVector2 GetInertialAcceleration()
+        {
+            return DVector2.Zero;
+        }
+
         public virtual DVector2 GetRelativeVelocity()
+        {
+            return Velocity - GravitationalParent.Velocity;
+        }
+
+        public virtual DVector2 GetInertialVelocity()
         {
             return Velocity - GravitationalParent.Velocity;
         }
@@ -96,6 +110,21 @@ namespace SpaceSim.Physics
         public virtual double GetRelativePitch()
         {
             return Pitch - GravitationalParent.Pitch;
+        }
+
+        public DVector2 GetLateralAcceleration()
+        {
+            return new DVector2(0, 0);
+        }
+
+        public DVector2 GetLateralVelocity()
+        {
+            return new DVector2(0, 0);
+        }
+
+        public DVector2 GetLateralPosition()
+        {
+            return new DVector2(0, 0);
         }
 
         public abstract double Visibility(RectangleD cameraBounds);

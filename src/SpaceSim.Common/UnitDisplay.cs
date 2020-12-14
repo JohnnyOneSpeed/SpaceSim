@@ -100,6 +100,11 @@ namespace SpaceSim.Common
             return force.ToString("#,##0.0") + " N";
         }
 
+        public static string Mach(double mach)
+        {
+            return mach.ToString("#,##0.00");
+        }
+
         public static string Mass(double mass)
         {
             if (mass > 10000000)
@@ -157,6 +162,13 @@ namespace SpaceSim.Common
             }
 
             double displayAngle = MathHelper.RadiansToDegrees * angle;
+
+            return displayAngle.ToString("0.0") + "°";
+        }
+
+        public static string AoA(double angle)
+        {
+            double displayAngle = Math.Abs(MathHelper.RadiansToDegrees * angle);
 
             return displayAngle.ToString("0.0") + "°";
         }

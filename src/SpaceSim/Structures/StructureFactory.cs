@@ -48,11 +48,20 @@ namespace SpaceSim.Structures
                         case "LandingPad":
                             structures.Add(new LandingPad(surfaceAngle, structureConfig.HeightOffset, planet));
                             break;
+                        case "LaunchMount":
+                            structures.Add(new LaunchMount(surfaceAngle, structureConfig.HeightOffset, planet));
+                            break;
+                        case "LaunchTower":
+                            structures.Add(new LaunchTower(surfaceAngle, structureConfig.HeightOffset, planet));
+                            break;
                         case "Ocean":
                             structures.Add(new Ocean(surfaceAngle, structureConfig.HeightOffset, planet));
                             break;
                         case "ServiceTower":
                             structures.Add(new ServiceTower(surfaceAngle, structureConfig.HeightOffset, planet));
+                            break;
+                        case "StarshipTower":
+                            structures.Add(new StarshipTower(surfaceAngle, structureConfig.HeightOffset, planet));
                             break;
                         case "Strongback":
                             structures.Add(new Strongback(surfaceAngle, structureConfig.HeightOffset, planet));

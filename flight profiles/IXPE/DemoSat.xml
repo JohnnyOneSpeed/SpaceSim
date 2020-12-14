@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Command xsi:type="Release">
+    <StartTime>0</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>10</StartTime>
+    <Duration>40</Duration>
+    <TargetOrientation>-106</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>13</StartTime>
+    <Duration>5</Duration>
+    <Message>This is a simulation of the NASA IXPE mission, currently scheduled for April 2021.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>19</StartTime>
+    <Duration>5</Duration>
+    <Message>The Imaging X-ray Polarimetry Explorer (IXPE) is unusual because of its equatorial orbit ...</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>25</StartTime>
+    <Duration>5</Duration>
+    <Message>... which cannot be directly entered unless launched from the equator.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>31</StartTime>
+    <Duration>5</Duration>
+    <Message>Otherwise, it requires a plane change at the equator from the initial inclination ...</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>37</StartTime>
+    <Duration>5</Duration>
+    <Message>... which for a launch from the Cape is 28.5°.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>43</StartTime>
+    <Duration>5</Duration>
+    <Message>For this mission, the plane change will require an enormous 3.66 km/s of ΔV.</Message>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>50</StartTime>
+    <Duration>50</Duration>
+    <TargetOrientation>-136</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>49</StartTime>
+    <Duration>5</Duration>
+    <Message>For that reason, I'm utilising the recent Starlink 0.9 first stage throttle profile ...</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>55</StartTime>
+    <Duration>5</Duration>
+    <Message>... which optimised performance by limiting the period and amount of throttle back for MaxQ.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>61</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 4x normal.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>61</StartTime>
+    <TargetIndex>6</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>61</StartTime>
+    <TargetScale>440</TargetScale>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>78</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>100</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-164</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Zoom">
+    <StartTime>130</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>-->
+  <Command xsi:type="Stage">
+    <StartTime>158</StartTime>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>161</StartTime>
+    <Duration>5</Duration>
+    <TargetOrientation>-147</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>167</StartTime>
+    <Duration>53</Duration>
+    <TargetOrientation>-155</TargetOrientation>
+  </Command>
+  <Command xsi:type="Deploy">
+    <Part>Fairing</Part>
+    <StartTime>180</StartTime>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>202</StartTime>
+    <Duration>5</Duration>
+    <Message>Due to the extremely light 315kg payload, staging occurs at a relatively high 2,450m/s.</Message>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>220</StartTime>
+    <Duration>120</Duration>
+    <TargetOrientation>-164</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>225</StartTime>
+    <Duration>5</Duration>
+    <Message>This leads to the drone ship being positioned 765 kms downrange, further than usual for F9.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>250</StartTime>
+    <Duration>5</Duration>
+    <Message>In order to cross the equator at apogee, the second stage burn has to be somewhat lofted.</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>275</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 16x normal.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>275</StartTime>
+    <TargetIndex>8</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>275</StartTime>
+    <TargetScale>100</TargetScale>
+  </Command>-->
+  <Command xsi:type="RelativePitch">
+    <StartTime>340</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-172</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>400</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>-177</TargetOrientation>
+  </Command>
+  <Command xsi:type="RelativePitch">
+    <StartTime>460</StartTime>
+    <Duration>20</Duration>
+    <TargetOrientation>-180</TargetOrientation>
+  </Command>
+  <Command xsi:type="Prograde">
+    <StartTime>500</StartTime>
+    <Duration>3000</Duration>
+    <InitialAdjustmentTime>25</InitialAdjustmentTime>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>690</StartTime>
+    <Duration>5</Duration>
+    <Message>Increasing update speed to 32x normal for the cruise to apogee.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>690</StartTime>
+    <TargetIndex>9</TargetIndex>
+  </Command>-->
+  <Command xsi:type="Yaw">
+    <StartTime>1600</StartTime>
+    <Duration>60</Duration>
+    <TargetOrientation>87.27</TargetOrientation>
+  </Command>
+  <!--<Command xsi:type="Post">
+    <StartTime>1200</StartTime>
+    <Duration>5</Duration>
+    <Message>Note the new parameters on the left once the plane change burn starts ...</Message>
+  </Command>
+  <Command xsi:type="Post">
+    <StartTime>1400</StartTime>
+    <Duration>5</Duration>
+    <Message>... in particular that the inclination gradually drops from 28.5° to 0°.</Message>
+  </Command>
+  <Command xsi:type="Rate">
+    <StartTime>1698</StartTime>
+    <TargetIndex>4</TargetIndex>
+  </Command>
+  <Command xsi:type="Zoom">
+    <StartTime>1770</StartTime>
+    <TargetScale>200</TargetScale>
+  </Command>-->
+  <Command xsi:type="Stage">
+    <StartTime>1900</StartTime>
+  </Command>
+</ArrayOfCommand>

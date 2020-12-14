@@ -46,14 +46,15 @@ namespace SpaceSim.Spacecrafts.FalconCommon
 
         private static string GenerateTexturePath(int block, bool isLeft)
         {
-            if (block >= 5)
+            switch(block)
             {
-                return isLeft ? "Textures/Spacecrafts/Falcon/Common/gridFinLeftB5.png"
+                case 5:
+                    return isLeft ? "Textures/Spacecrafts/Falcon/Common/gridFinLeftB5.png"
                               : "Textures/Spacecrafts/Falcon/Common/gridFinRightB5.png";
-            }
-
-            return isLeft ? "Textures/Spacecrafts/Falcon/Common/gridFinLeft.png"
+                default:
+                    return isLeft ? "Textures/Spacecrafts/Falcon/Common/gridFinLeft.png"
                           : "Textures/Spacecrafts/Falcon/Common/gridFinRight.png";
+            }
         }
 
         public void Deploy()

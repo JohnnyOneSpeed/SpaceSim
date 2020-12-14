@@ -1,0 +1,51 @@
+For those considering the business case for the subscale BFR, attached is a simulation of a GTO mission. The 3/4 scale ship should be able to deliver a 40mT payload to GTO, allowing for re-use, and a slightly supersynchronous transfer orbit. Even allowing for the extra mass of a carousel, it should be possible to deliver 5-6 x 6mT satellites in the one mission.
+
+The IAC Mexico presentation suggested a cost per tonne to Mars of $140,000. Does anyone have a sense of the cost for the scaled system to LEO/GTO?
+
+
+[quote author=Peter.Colin link=topic=37599.msg1712227#msg1712227 date=1502638361]
+If the Raptor engines turned out to have a 75% smaller diameter than envisioned.
+You could either reduce the diameter of the BFR by 75% to 9 meter or increase the number of Raptors to 100 for a 12 meter diameter (42/0,42=100)
+
+The reason why SpaceX reduced the rocket diameter is crucial here, if it was 75% engine size, booster engine count would still be 42 for the scalled BFR.
+[/quote]
+
+[table]
+[tr][td]Dimension[/td][td]Ratio[/td][/tr]
+[tr][td]Linear[/td][td]0.75[/td][/tr]
+[tr][td]Area[/td][td]0.5625[/td][/tr]
+[tr][td]Mass[/td][td]0.421875[/td][/tr]
+[/table]
+
+Thrust is proportional to area.
+If the full scale SL Raptors are 1.51mØ and generate 300mT of thrust, 3/4 scale versions would generate 300 x 0.5625 = 168.75mT of thrust.
+For the ITS, 300 x 42 = 12,600mT, giving a liftoff T/W of 12,600 / 10,500 = 1.2.
+The mass of the 3/4 scale rocket would be 10,500 x 0.421875 = 4430mT.
+For the same T/W the scaled rocket would require 4430 * 1.2 = 5316mT of thrust, giving 5316 / 168.75 = 31.5 engines, not 42.
+For 42 engines, the required thrust would be 5316 / 42 = 126.6mT each. That is an area ratio of 0.422, for a linear scale of 0.6496 or 65%.
+
+The scaled rocket would require 17.7 full scale Raptor 40 engines, but 16 Raptor 40+ would give similar performance.
+I'll leave it to the economists to work out which would be cheaper to produce: 16 x Raptor 40+, 32 at 75% scale, or 42 at 65% scale.
+
+Inspired in part by a stunning NASA poster of the Apollo mission profile, here is a speculative simulation of a scaled BFS moon cargo mission, in three parts:
+
+1. Trans lunar injection (TLI) from LEO to low lunar orbit (LLO).
+2. Lunar landing from LLO.
+3. Return from the lunar surface to LEO.
+
+The initial mass of the BFS is 2,590 * 0.422 = 1092.8mT.
+This gives a payload to the moon of 57.2mT. I've assumed a 10mT return payload, so 47.2mT to the lunar surface.
+The masses at some of the mission phases are:
+
+[table]
+[tr][td]Phase[/td][td]Total[/td][td]Fuel[/td][td]Dry mass[/td][td]Payload[/td][/tr]
+[tr][td]Pre TLI[/td][td]1,092.8mT[/td][td]997.8mT[/td][td]37.8mT[/td][td]57.2mT[/td][/tr]
+[tr][td]Post TLI[/td][td]475.9mT[/td][td]380.9mT[/td][td]37.8mT[/td][td]57.2mT[/td][/tr]
+[tr][td]Post LLO[/td][td]373.0mT[/td][td]278.0mT[/td][td]37.8mT[/td][td]57.2mT[/td][/tr]
+[tr][td]Post landing[/td][td]231.9mT[/td][td]136.9mT[/td][td]37.8mT[/td][td]57.2mT[/td][/tr]
+[tr][td]Pre return[/td][td]184.4mT[/td][td]136.6mT[/td][td]37.8mT[/td][td]10.0mT[/td][/tr]
+[tr][td]Post LLO[/td][td]112.4mT[/td][td]64.6mT[/td][td]37.8mT[/td][td]10.0mT[/td][/tr]
+[tr][td]Post TEI[/td][td]89.3mT[/td][td]41.5mT[/td][td]37.8mT[/td][td]10.0mT[/td][/tr]
+[/table]
+
+

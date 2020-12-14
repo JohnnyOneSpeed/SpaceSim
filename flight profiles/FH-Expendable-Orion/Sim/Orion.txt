@@ -1,0 +1,126 @@
+American manned spacecraft module. Orion re-entry vehicle (crew module). A 25% scale-up of the Apollo capsule of the 1960's.
+Status: In development 2016. Payload: 100 kg (220 lb). Gross mass: 9,742 kg (21,477 lb). Height: 3.30 m (10.80 ft). Diameter: 5.03 m (16.50 ft). 
+
+Crew Size: 6. Habitable Volume: 10.23 m3. Environmental Control System: 128 kg (282 lb). RCS Coarse No x Thrust: 24 x 445 N. RCS Propellants: 175 kg (385 lb). Spacecraft delta v: 50 m/s (164 ft/sec). 
+
+
+American manned spacecraft module. Orion service module. Masses estimated based on delta-V released by NASA.
+Status: In development 2016. Thrust: 33.40 kN (7,509 lbf). Gross mass: 9,819 kg (21,647 lb). Unfuelled mass: 69 kg (152 lb)??? Height: 4.78 m (15.68 ft). Diameter: 5.03 m (16.50 ft). Span: 17.00 m (55.00 ft). 
+
+RCS Coarse No x Thrust: 16 x 445 N. Spacecraft delta v: 1,855 m/s (6,085 ft/sec). Electric System: 9.15 average kW.
+
+From Tsiolkovsky, prop mass = 5211kg.
+
+
+
+[quote author=OneSpeed link=topic=37599.msg1933612#msg1933612 date=1554773384]
+[quote author=TGMetsFan98 link=topic=37599.msg1933325#msg1933325 date=1554735687]
+For sake of completeness, can we run the numbers on replacing FH Stage 2 with ICPS and see how far that gets us?
+[/quote]
+
+I'm not sure that the FH S2 residuals + ICPS + Orion provide enough ΔV for lunar orbit and return from LEO, but I'm happy to try a simulation once Arabsat-6A has flown. The telemetry provided should improve the sim accuracy considerably.
+[/quote]
+
+To be clear, I don't think it is feasible to replace the FH S2 with ICPS, it will need both.
+
+I've started building a sim up, and with a 3g limit for crew, it's very tight. There are some conflicting numbers out there for ICPS, ESM, Orion and the LAS. What I'm using is below, but if anyone has more informed numbers please let me know.
+
+ICPS
+Dry mass: 3,490kg
+Propellant: 27,220kg
+Gross: 30,710kg
+Thrust: 110.1kN
+Isp: 465.5s
+Burn time: 27,220 / 24.14 = 1128s
+ΔV: 465.5 * 9.8 * ln(56558/29338) = 2996.37m/s
+
+ESM
+Dry mass: 6,461kg
+Propellant: 9,000kg
+Gross: 15,461kg
+Thrust: 26.6kN
+Isp: 319s
+Burn time: 9,000 / 8.5 = 1059s
+ΔV: 319 * 9.8 * ln(25848/16848) = 1338.9m/s
+
+Orion
+Dry mass: 8,500kg
+Propellant: 175kg
+Payload: 1,712kg
+Gross: 10,387kg
+Thrust: 16 x 445N
+Isp: 220s
+ΔV: 220 * 9.8 * ln(10387/10212) = 36.6m/s
+
+LAS
+Dry mass: 3,696kg
+Propellant: 2,480kg
+Gross: 6,176kg
+Thrust: 2,253kN
+Isp: 250s
+ΔV: 250 * 9.8 * ln(16563/14083) = 397.6m/s
+
+Combined FH payload mass: 62,734kg
+
+
+[quote author=TGMetsFan98 link=topic=37599.msg1933325#msg1933325 date=1554735687]
+I'm evaluating the options NASA studied for accelerating EM-1. While those studies concluded there was no way to use Delta or Falcon to accelerate the EM-1 timeline, they did find options that could work a few years down the road. Specifically, Bridenstine said a Falcon Heavy with an ICPS could get Orion to lunar orbit: the capability they currently need SLS for. What wasn't clear was whether that meant replacing FH's upper stage with an ICPS, or putting ICPS on top of FH Stage 2.
+
+My math (purely from a mass-to-orbit perspective, not getting into potential aerodynamic issues right now) says FH with its own Stage 2 could easily place ICPS and a fully fueled Orion to LEO. ICPS would then do the TLI, and that would get Orion to lunar orbit and back. Please correct me if that's wrong.
+
+For sake of completeness, can we run the numbers on replacing FH Stage 2 with ICPS and see how far that gets us?
+[/quote]
+
+Firstly, for a single expendable FH launching ESM + Orion to LEO, if we replace FH S2 with ICPS, T/W at staging will be 110000 / (56558 * 9.8) = 0.198. Whilst sufficient once in orbit, this thrust ratio is too low for an efficient ascent to LEO, even from a lofted trajectory.
+
+So, back to the question: What could Falcon Heavy do to accelerate EM-1?
+
+Assuming EM-1 is uncrewed, could an expendable FH get ICPS + ESM + Orion to LEO? That is a combined mass of 56,558kg, considerably less than the 63,800kg SpaceX claim is possible for FH. But how do SpaceX measure payload to LEO? Their standard payload attach fitting (PAF) maximum payload mass is 11,000kg, with the payload CoG no more than 3m from the adapter interface. So, 63,800kg to LEO would ordinarily mean an 11,000kg spacecraft, plus the 4,500kg dry mass of S2, plus residual propellant (63,800 - 11,000 - 4,500 = 48,300kg). This is quite a different proposition from placing a 56,558kg payload on top of S2, with a CoG some 10m from the interface. S2 would likely require considerable customisation (e.g. thicker walls) to support this, as might the core stage.
+
+However, SpaceX do state 'Payloads in excess of the figure can be accommodated as a mission unique service.'. Given a suitable adapter, perhaps the 30,710kg ICPS (plus nosecone) and the 25848kg ESM + Orion could be lofted to LEO on separate missions, and docked in LEO (nose to nose using the International Docking System Standard?). A crewed mission would require the addition of the Orion LAS, for an initial payload of 32,024kg.
+
+From my sim of the recent Arabsat-6A mission, the payload to orbit was 30,393kg. So, I've taken that mission profile and substituted the satellite and fairings for Orion, the ESM, and the Orion LAS. As a result, the FH S2 needs to run at a higher AoA to maintain altitude, and it needs to burn for about a minute longer, but it does get to orbit with a few seconds of propellant remaining. There are even sufficient residuals for a circularisation burn to 300 x 300kms.
+
+
+With more aggressive profiles, and hence reduced gravity losses, both of these FH missions should be achievable with full reuse of the core and booster stages.
+
+So, assuming that two Falcon Heavy missions could get it that far, what could ICPS + ESM + Orion achieve from LEO?
+
+ICPS
+Dry mass: 3,490kg
+Propellant: 27,220kg
+Gross: 30,710kg
+Thrust: 110.1kN
+Isp: 465.5s
+Burn time: 1128s
+ΔV including ESM + Orion: 465.5 * 9.8 * ln(56558/29338) = 2996.37m/s
+
+ESM
+Dry mass: 6,461kg
+Propellant: 9,000kg
+Gross: 15,461kg
+Thrust: 26.6kN
+Isp: 319s
+Burn time: 1059s
+ΔV including Orion: 319 * 9.8 * ln(25848/16848) = 1338.9m/s
+
+Orion
+Dry mass: 8,500kg
+Propellant: 175kg
+Payload: 1,712kg
+Gross: 10,387kg
+Thrust: 16 x 445N
+Isp: 220s
+ΔV Orion only: 220 * 9.8 * ln(10387/10212) = 36.6m/s
+
+I've attached a sim that shows that although ICPS could only get ESM + Orion halfway to the Moon, a 122s (out of 1059s available) ESM burn could complete the TLI. The Lunar Orbital Platform-Gateway (LOP-G) architecture assumes that the Lunar destination for Orion is a 1,500 x 70,000km rectilinear halo orbit, which is essentially a polar lunar orbit with a 6-day period.
+
+SpaceSim is a 2D representation of spaceflight, so for the sake of comparison I've modelled braking into a tighter (more expensive) equatorial orbit with a 270s burn. This leaves 667s of burn time for the return journey. The sim's equatorial lunar orbit precesses as the Moon orbits the Earth, making it increasingly difficult for a single return TEI burn to be feasible. So, in the sim, I've performed two burns, one to circularise the orbit, and a second for TEI. These require more ΔV than a single burn from the halo orbit, so I think it confirms that ICPS + ESM + Orion could perform a useful lunar return mission from LEO.
+
+
+
+ 
+
+
+
+

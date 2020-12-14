@@ -1,0 +1,24 @@
+[quote author=speedevil link=topic=37599.msg1935904#msg1935904 date=1555160017]
+[quote author=guckyfan link=topic=37599.msg1935839#msg1935839 date=1555136121]
+[quote author=Oersted link=topic=37599.msg1933489#msg1933489 date=1554754112]
+If Starship becomes reality at more or less the price point envisaged it will lead to Outer Solar System exploration on steroids!
+[/quote]
+
+These probes would go out very fast. I doubt that a hypergol stage can brake that speed unless you make the probe small and the braking stage very large. I think going quite big and fast and spend a few years braking will be faster over all. Someone doing the math would be interesting. I think a large probe with plenty of power for instruments and data transmission would be a good thing even if it takes a few years longer.
+[/quote]
+
+Oberth helps quite a lot if you skim a gas giant.
+If I'm not fudging the maths, 1km/s at the edge of Jupiters atmosphere is worth 10km/s of braking.
+
+You wouldn't want to do this if this was an utterly irreplaceable probe.
+But, in the context of much cheaper launch, ... such silliness as a burn at the cloudtops, followed by a Callisto (for example) flyby to shape the orbit into a capture orbit, the risk may be quite worth it.
+
+It's a shame aerobraking using a gas giant tends to get a little warm.
+[/quote]
+
+Oberth certainly does help. For example, a 1,000,000km x 3,000km Jovian orbit has a velocity at perizene of 56.4 km/s, and escape velocity from that orbit is only 58.3 km/s, so if you could arrive at perizene at escape velocity, a 2km/s burn would be sufficient.
+
+However, the velocities that StarKicker would be capable of imparting are much higher. I've tweaked the StarKicker sim to skim Jupiter at an altitude of about 3000kms. At that altitude, the Starlink satellite would be travelling at an alarming 69 km/s, and so would require 12.6 km/s of ΔV for capture, which I doubt is feasible.
+
+I think guckyfan makes a good point, and that a larger, slower probe could still be captured.
+

@@ -115,7 +115,7 @@ namespace SpaceSim.Spacecrafts.ITS
 
         //private SpriteSheet _spriteSheet;
 
-        public StarshipP2P(string craftDirectory, DVector2 position, DVector2 velocity, double payloadMass = 0, double propellantMass = 1000000)
+        public StarshipP2P(string craftDirectory, DVector2 position, DVector2 velocity, double payloadMass = 0, double propellantMass = 1500000)
             : base(craftDirectory, position, velocity, payloadMass, propellantMass, null)
         {
             StageOffset = new DVector2(0, 0);
@@ -125,11 +125,25 @@ namespace SpaceSim.Spacecrafts.ITS
             Fins[1] = new Fin(this, new DVector2(2.0, 17.2), new DVector2(5.86, 13.0), -Math.PI / 6, "Textures/Spacecrafts/ITS/Fin.png", 3);
 
             Engines = new IEngine[9];
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 3; i++)
+            {
+                double engineOffsetX = (i - 4.0) / 4.0;
+                var offset = new DVector2(engineOffsetX * Width * 0.2, Height * 0.4);
+                Engines[i] = new RaptorSL360(i, this, offset);
+            }
+
+            for (int i = 3; i < 6; i++)
             {
                 double engineOffsetX = (i - 4.0) / 4.0;
                 var offset = new DVector2(engineOffsetX * Width * 0.2, Height * 0.4);
                 Engines[i] = new RaptorSL300(i, this, offset);
+            }
+
+            for (int i = 6; i < 9; i++)
+            {
+                double engineOffsetX = (i - 4.0) / 4.0;
+                var offset = new DVector2(engineOffsetX * Width * 0.2, Height * 0.4);
+                Engines[i] = new RaptorSL360(i, this, offset);
             }
 
             //_spriteSheet = new SpriteSheet("Textures/Spacecrafts/Its/scaledShip.png", 12, 12);
@@ -235,9 +249,9 @@ namespace SpaceSim.Spacecrafts.ITS
             }
 
             if (rollAngle <= 90)
-                graphics.DrawImage(this.Texture, screenBounds.X - screenBounds.Width * 0.43f, screenBounds.Y, screenBounds.Width * 1.8f, screenBounds.Height);
+                graphics.DrawImage(this.Texture, screenBounds.X - screenBounds.Width * 0.6f, screenBounds.Y, screenBounds.Width * 2.1f, screenBounds.Height);
             else
-                graphics.DrawImage(this.Texture, screenBounds.X + screenBounds.Width * 1.43f, screenBounds.Y, -screenBounds.Width * 1.8f, screenBounds.Height);
+                graphics.DrawImage(this.Texture, screenBounds.X + screenBounds.Width * 1.43f, screenBounds.Y, -screenBounds.Width * 2.1f, screenBounds.Height);
 
             // Index into the sprite
             //int ships = _spriteSheet.Cols * _spriteSheet.Rows;

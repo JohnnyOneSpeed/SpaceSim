@@ -59,7 +59,7 @@ namespace SpaceSim.SolarSystem.Planets
                 temperature = -31 - 0.000998 * altitude;
             }
 
-            double pressure = 0.699 * Math.Exp(-0.00009 * temperature);
+            double pressure = 0.699 * Math.Exp(-0.00009 * altitude);
             return pressure / (0.1921 * (temperature + 273.1));
         }
 

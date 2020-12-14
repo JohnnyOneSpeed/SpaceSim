@@ -1,0 +1,3 @@
+From the In Flight Abort (IFA) Draft Environmental Assessment (attached), the abort test sequence does not have specific timings, altitudes, distances and velocities. Rather, it specifies ranges for all of those values, as per the table below.
+
+So, what I've attempted to simulate here is the mean of all of those ranges. Of course, your mileage may vary. Interestingly, the separation event range is from 83-100 seconds. All of these values are well after MaxQ, which most of us assumed was the logical time to perform the abort. There is another consideration though, and that is the acceleration being provide by the booster at MaxQ is actually quite low, around 1.6gs. In the sim, the abort is at 90 seconds, when  acceleration has increased to 2.4gs.

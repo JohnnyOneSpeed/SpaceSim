@@ -30,7 +30,7 @@ namespace SpaceSim.Engines
 
         public override string ToString()
         {
-            return "RaptorVac";
+            return "Raptor Vac";
         }
     }
 }

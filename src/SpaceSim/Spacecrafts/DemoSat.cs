@@ -108,8 +108,8 @@ namespace SpaceSim.Spacecrafts
         private bool _deployedFairings;
         DateTime timestamp = DateTime.Now;
 
-        public DemoSat(string craftDirectory, DVector2 position, DVector2 velocity, double payloadMass)
-            : base(craftDirectory, position, velocity, payloadMass, 0, "Satellites/default.png")
+        public DemoSat(string craftDirectory, DVector2 position, DVector2 velocity, double payloadMass, string imagePath = "Satellites/default.png")
+            : base(craftDirectory, position, velocity, payloadMass, 0, imagePath)
         {
             _craftName = new DirectoryInfo(craftDirectory).Name;
 
@@ -162,24 +162,32 @@ namespace SpaceSim.Spacecrafts
             _leftFairing.RenderGdi(graphics, camera);
             _rightFairing.RenderGdi(graphics, camera);
 
-            if (Settings.Default.WriteCsv && (DateTime.Now - timestamp > TimeSpan.FromSeconds(1)))
+            if (Settings.Default.WriteCsv && (DateTime.Now - timestamp > TimeSpan.FromSeconds(1.17)))
             {
                 string filename = MissionName + ".csv";
 
                 if (!File.Exists(filename))
                 {
-                    File.AppendAllText(filename, "Velocity, Acceleration, Altitude, Throttle, Heating rate\r\n");
+                    //File.AppendAllText(filename, "Velocity (m/s), Acceleration (cm/s²), Altitude (hm), Throttle (‰), Heating rate (daW/m²), Dynamic pressure (daPa)\r\n");
+                    File.AppendAllText(filename, "Velocity (m/s), Acceleration (cm/s²), Altitude (hm), Throttle (‰), Lateral Acceleration (cm/s²), Heating rate (daW/m²), Dynamic pressure (daPa)\r\n");
                 }
 
                 timestamp = DateTime.Now;
 
-                string contents = string.Format("{0}, {1}, {2}, {3}, {4}\r\n",
+                double density = this.GravitationalParent.GetAtmosphericDensity(this.GetRelativeAltitude());
+                double velocity = this.GetRelativeVelocity().Length();
+                double dynamicPressure = 0.5 * density * velocity * velocity;
+
+                //string contents = string.Format("{0}, {1}, {2}, {3}, {4}, {5}\r\n",
+                string contents = string.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}\r\n",
                     this.GetRelativeVelocity().Length(),
                     this.GetRelativeAcceleration().Length() * 100,
                     this.GetRelativeAltitude() / 100,
                     //this.GetRelativeAltitude() / 1000,
                     this.Throttle * 10,
-                    this.HeatingRate / 10);
+                    this.GetLateralAcceleration().Length() * 100,
+                    this.HeatingRate / 10,
+                    dynamicPressure / 10);
                 File.AppendAllText(filename, contents);
             }
         }
